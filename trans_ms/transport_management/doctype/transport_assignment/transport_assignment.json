@@ -101,7 +101,7 @@
    "fieldtype": "Link",
    "hidden": 1,
    "label": "Units",
-   "options": "Unit of Measure"
+   "options": "UOM"
   },
   {
    "fieldname": "section_transporter_details",
@@ -325,7 +325,7 @@
    "fieldname": "file_number",
    "fieldtype": "Link",
    "label": "File Number",
-   "options": "Files",
+   "options": "File",
    "read_only": 1
   },
   {
