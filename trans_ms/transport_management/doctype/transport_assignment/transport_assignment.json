@@ -330,9 +330,8 @@
   },
   {
    "fieldname": "import",
-   "fieldtype": "Link",
+   "fieldtype": "Data",
    "label": "Import Reference",
-   "options": "Import",
    "read_only": 1
   },
   {
@@ -341,9 +340,8 @@
   },
   {
    "fieldname": "export",
-   "fieldtype": "Link",
+   "fieldtype": "Data",
    "label": "Export Reference",
-   "options": "Export",
    "read_only": 1
   },
   {

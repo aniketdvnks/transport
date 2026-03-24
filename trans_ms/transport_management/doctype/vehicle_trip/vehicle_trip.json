@@ -380,16 +380,14 @@
   },
   {
    "fieldname": "main_import",
-   "fieldtype": "Link",
+   "fieldtype": "Data",
    "label": "Main Import Reference",
-   "options": "Import",
    "read_only": 1
   },
   {
    "fieldname": "main_export",
-   "fieldtype": "Link",
+   "fieldtype": "Data",
    "label": "Main Export Reference",
-   "options": "Export",
    "read_only": 1
   },
   {
