@@ -182,7 +182,7 @@ class FuelRequest(Document):
         if hasattr(self, "__setup__"):
             self.__setup__()
 
-
+@frappe.whitelist(allow_guest=True)
 def set_status(doc):
     parent_doc_name = frappe.db.get_value("Fuel Request Table", doc, "parent")
     fuel_requests = frappe.db.sql(
@@ -222,7 +222,7 @@ def approve_request(**args):
     doc.db_set("status", "Approved")
     doc.db_set("approved_by", args.user)
     doc.db_set("approved_date", timestamp)
-    set_status(args.request_docname)
+    # set_status(args.request_docname)
     return "Request Updated"
 
 
@@ -238,7 +238,7 @@ def reject_request(**args):
     doc.db_set("status", "Rejected")
     doc.db_set("approved_by", args.user)
     doc.db_set("approved_date", timestamp)
-    set_status(args.request_docname)
+    # set_status(args.request_docname)
     return "Request Updated"
 
 

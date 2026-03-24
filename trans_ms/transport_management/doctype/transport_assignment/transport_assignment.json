@@ -115,54 +115,60 @@
    "options": "\nIn House\nSub-Contractor"
   },
   {
+   "depends_on": "eval:doc.transporter_type == 'Sub-Contractor'",
    "fieldname": "sub_contractor",
    "fieldtype": "Link",
-   "hidden": 1,
    "in_global_search": 1,
    "in_standard_filter": 1,
    "label": "Sub-Contractor",
+   "mandatory_depends_on": "eval:doc.transporter_type == 'Sub-Contractor'",
    "options": "Supplier"
   },
   {
+   "depends_on": "eval:doc.transporter_type == 'In House'",
    "fieldname": "assigned_vehicle",
    "fieldtype": "Link",
    "label": "Assigned Vehicle",
-   "options": "Vehicle",
-   "read_only": 1
+   "mandatory_depends_on": "eval:doc.transporter_type == 'In House'",
+   "options": "Vehicle"
   },
   {
+   "depends_on": "eval:doc.transporter_type == 'Sub-Contractor'",
    "fieldname": "vehicle_plate_number",
    "fieldtype": "Data",
-   "hidden": 1,
    "in_global_search": 1,
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Vehicle Plate Number",
-   "read_only": 1
+   "mandatory_depends_on": "eval:doc.transporter_type == 'Sub-Contractor'",
+   "read_only_depends_on": "eval:doc.transporter_type == 'In House'"
   },
   {
+   "depends_on": "eval:doc.transporter_type == 'In House'",
    "fieldname": "assigned_trailer",
    "fieldtype": "Link",
    "label": "Assigned Trailer",
-   "options": "Trailer",
-   "read_only": 1
+   "mandatory_depends_on": "eval:doc.transporter_type == 'In House'",
+   "options": "Trailer"
   },
   {
+   "depends_on": "eval:doc.transporter_type == 'Sub-Contractor'",
    "fieldname": "trailer_plate_number",
    "fieldtype": "Data",
-   "hidden": 1,
    "in_list_view": 1,
    "label": "Trailer Plate Number",
-   "read_only": 1
+   "mandatory_depends_on": "eval:doc.transporter_type == 'Sub-Contractor'",
+   "read_only_depends_on": "eval:doc.transporter_type == 'In House'"
   },
   {
+   "depends_on": "eval:doc.transporter_type == 'In House'",
    "fieldname": "column_break_18",
    "fieldtype": "Column Break"
   },
   {
+   "depends_on": "eval:doc.transporter_type == 'In House'",
    "fieldname": "assigned_driver",
    "fieldtype": "Link",
-   "hidden": 1,
    "label": "Assigned Driver",
    "options": "Driver"
   },
@@ -172,27 +178,25 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Driver Name",
-   "read_only": 1
+   "mandatory_depends_on": "eval:doc.transporter_type == 'Sub-Contractor'",
+   "read_only_depends_on": "eval:doc.transporter_type == 'In House'"
   },
   {
    "fieldname": "passport_number",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Driver Passport",
-   "read_only": 1
+   "label": "Driver Passport"
   },
   {
    "fetch_from": "assigned_driver.license_number",
    "fieldname": "driver_licence",
    "fieldtype": "Data",
-   "label": "Driver Licence",
-   "read_only": 1
+   "label": "Driver Licence"
   },
   {
    "fieldname": "driver_contact",
    "fieldtype": "Data",
-   "label": "Driver Phone Number",
-   "read_only": 1
+   "label": "Driver Phone Number"
   },
   {
    "fieldname": "section_route",
@@ -411,13 +415,15 @@
  "is_submittable": 1,
  "istable": 1,
  "links": [],
- "modified": "2022-12-29 16:39:16.136885",
+ "modified": "2023-03-21 12:35:36.483928",
  "modified_by": "Administrator",
  "module": "Transport Management",
  "name": "Transport Assignment",
+ "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [],
  "sort_field": "modified",
  "sort_order": "DESC",
+ "states": [],
  "track_changes": 1
 }

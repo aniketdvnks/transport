@@ -129,10 +129,9 @@ frappe.ui.form.on('Requested Payments', {
 			frappe.set_route("query-report", "General Ledger");
 		}, __("View"));
 
-		frappe.throw()
 		let amount_tsh = 0
 		let amount_usd = 0
-		frm.doc.accounts_approval.forEach((d) =>{
+		frm.doc.accounts_approval.forEach((d) => {
 			if (d.request_currency == "TZS") {
 				amount_tsh += d.request_amount;
 			}

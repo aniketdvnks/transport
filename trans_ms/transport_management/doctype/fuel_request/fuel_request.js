@@ -115,6 +115,16 @@ cur_frm.cscript.approve_request = function (frm) {
                         }
                     });
                 });
+                frappe.call({
+                    method: "trans_ms.transport_management.doctype.fuel_request.fuel_request.set_statust",
+                    freeze: true,
+                    args: {
+                        request_doctype: "Fuel Request Table",
+                    },
+                    callback: function (data) {
+                        //alert(JSON.stringify(data));
+                    }
+                });
                 location.reload();
             },
             function () {
@@ -147,6 +157,16 @@ cur_frm.cscript.reject_request = function (frm) {
                             //alert(JSON.stringify(data));
                         }
                     });
+                });
+                frappe.call({
+                    method: "trans_ms.transport_management.doctype.fuel_request.fuel_request.set_statust",
+                    freeze: true,
+                    args: {
+                        request_doctype: "Fuel Request Table",
+                    },
+                    callback: function (data) {
+                        //alert(JSON.stringify(data));
+                    }
                 });
                 location.reload();
             },

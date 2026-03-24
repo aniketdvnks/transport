@@ -23,7 +23,7 @@ def set_dimension(src_doc, tr_doc, src_child=None, tr_child=None):
                 value = dim.value
             elif dim.source_type == "Child" and src_child:
                 value = src_child.get(dim.child_field_name)
-
+            
             if dim.target_type == "Main":
                 setattr(tr_doc, dim.target_field_name, value)
             elif dim.target_type == "Child" and tr_child:

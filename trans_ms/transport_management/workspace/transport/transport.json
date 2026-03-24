@@ -1,197 +1,217 @@
 {
- "category": "Domains",
  "charts": [],
- "creation": "2021-08-19 11:51:33.330890",
- "developer_mode_only": 0,
- "disable_user_customization": 0,
+ "content": "[{\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Transport</span>\",\"col\":12}},{\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Report &amp; Masters</b></span>\",\"col\":12}},{\"type\":\"card\",\"data\":{\"card_name\":\"Document\",\"col\":4}},{\"type\":\"card\",\"data\":{\"card_name\":\"Trip\",\"col\":4}},{\"type\":\"card\",\"data\":{\"card_name\":\"Setup\",\"col\":4}},{\"type\":\"card\",\"data\":{\"card_name\":\"Setting\",\"col\":4}}]",
+ "creation": "2023-02-13 15:30:16.474905",
  "docstatus": 0,
  "doctype": "Workspace",
- "extends_another_page": 0,
+ "for_user": "",
  "hide_custom": 0,
  "icon": "map",
  "idx": 0,
- "is_default": 0,
- "is_standard": 1,
- "public":1,
+ "is_hidden": 0,
  "label": "Transport",
  "links": [
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Document",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Card Break"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Transport Order",
-   "link_to": "Transportation Order",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Vehicle Trip",
-   "link_to": "Vehicle Trip",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Fuel Request",
-   "link_to": "Fuel Request",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Requested Payment",
-   "link_to": "Requested Payments",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
    "label": "Trip",
+   "link_count": 5,
    "link_type": "DocType",
    "onboard": 0,
+   "only_for": "Tanzania",
    "type": "Card Break"
   },
   {
    "hidden": 0,
    "is_query_report": 0,
    "label": "Trip Route",
+   "link_count": 0,
    "link_to": "Trip Route",
    "link_type": "DocType",
    "onboard": 0,
+   "only_for": "Tanzania",
    "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 0,
    "label": "Trip Location",
+   "link_count": 0,
    "link_to": "Trip Location",
    "link_type": "DocType",
    "onboard": 0,
+   "only_for": "Tanzania",
    "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 0,
    "label": "Trip Location Type",
+   "link_count": 0,
    "link_to": "Trip Location Type",
    "link_type": "DocType",
    "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Setup",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Card Break"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Vehicle",
-   "link_to": "Vehicle",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Vehicle Inspection Template",
-   "link_to": "Vehicle Inspection Template",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Trailer",
-   "link_to": "Trailer",
-   "link_type": "DocType",
-   "onboard": 0,
+   "only_for": "Tanzania",
    "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 0,
    "label": "Fixed Expense",
+   "link_count": 0,
    "link_to": "Fixed Expense",
    "link_type": "DocType",
    "onboard": 0,
+   "only_for": "Tanzania",
    "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 0,
    "label": "Cargo Type",
-   "link_to": "Transport Cargo Type",
+   "link_count": 0,
+   "link_to": "Cargo Type",
    "link_type": "DocType",
    "onboard": 0,
-   "only_for": "",
+   "only_for": "Tanzania",
    "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Vehicle Document Type",
-   "link_to": "Vehicle Documents Type",
+   "label": "Setup",
+   "link_count": 3,
    "link_type": "DocType",
    "onboard": 0,
-   "only_for": "",
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Driver Document",
-   "link_to": "Driver Documents",
-   "link_type": "DocType",
-   "onboard": 0,
-   "only_for": "",
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Settings",
-   "link_type": "DocType",
-   "onboard": 0,
+   "only_for": "Tanzania",
    "type": "Card Break"
   },
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Transport Settings",
+   "label": "Vehicle",
+   "link_count": 0,
+   "link_to": "Vehicle",
+   "link_type": "DocType",
+   "onboard": 0,
+   "only_for": "Tanzania",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Vehicle Inspection Template",
+   "link_count": 0,
+   "link_to": "Vehicle Inspection Template",
+   "link_type": "DocType",
+   "onboard": 0,
+   "only_for": "Tanzania",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Trailer",
+   "link_count": 0,
+   "link_to": "Trailer",
+   "link_type": "DocType",
+   "onboard": 0,
+   "only_for": "Tanzania",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Setting",
+   "link_count": 1,
+   "link_type": "DocType",
+   "onboard": 0,
+   "only_for": "Tanzania",
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Transport Setting",
+   "link_count": 0,
    "link_to": "Transport Settings",
    "link_type": "DocType",
    "onboard": 0,
+   "only_for": "Tanzania",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Document",
+   "link_count": 5,
+   "link_type": "DocType",
+   "onboard": 0,
+   "only_for": "Tanzania",
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Transporation Order",
+   "link_count": 0,
+   "link_to": "Transportation Order",
+   "link_type": "DocType",
+   "onboard": 0,
+   "only_for": "Tanzania",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Vehicle Trip",
+   "link_count": 0,
+   "link_to": "Vehicle Trip",
+   "link_type": "DocType",
+   "onboard": 0,
+   "only_for": "Tanzania",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Fuel Request",
+   "link_count": 0,
+   "link_to": "Fuel Request",
+   "link_type": "DocType",
+   "onboard": 0,
+   "only_for": "Tanzania",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Requested Payment",
+   "link_count": 0,
+   "link_to": "Requested Payments",
+   "link_type": "DocType",
+   "onboard": 0,
+   "only_for": "Tanzania",
    "type": "Link"
   }
  ],
- "modified": "2022-11-28 13:08:32.166360",
+ "modified": "2023-02-13 15:33:34.689582",
  "modified_by": "Administrator",
  "module": "Transport Management",
  "name": "Transport",
  "owner": "Administrator",
- "pin_to_bottom": 0,
- "pin_to_top": 0,
- "shortcuts": []
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Fleet Manager"
+  },
+  {
+   "role": "System Manager"
+  }
+ ],
+ "sequence_id": 1.0,
+ "shortcuts": [],
+ "title": "Transport"
 }

@@ -86,75 +86,13 @@ frappe.ui.form.on('Transportation Order', {
 	},
 
 	show_submit_button: function (frm) {
-		/*//If request is from module, save has been disabled hence need to save manually
-		if(frm.doc.reference_docname)
-		{
-			//Show the not saved label in indicator
-			frm.page.set_indicator('Not Saved', 'orange');
 
-			//Activate the submit button (The label has been changed to save)
-			frm.page.set_primary_action(__("Save"), function() {
-				//First validate vehicle assign table
-				if(frm.events.validate_assignment(frm))
-				{
-					cur_frm.doc.assign_transport.forEach(function(row){
-						frappe.call({
-							method: "fleet_management.fleet_management.doctype.transport_request.transport_request.assign_vehicle",
-							freeze: true,
-							args: {
-								reference_doctype: cur_frm.doc.reference_doctype,
-								reference_docname: cur_frm.doc.reference_docname,
-								cargo_docname: row.cargo,
-								//cargo_idx: locals['Cargo Details'][row.cargo].idx,
-								assigned_vehicle: row.assigned_vehicle,
-								assigned_trailer: row.assigned_trailer,
-								assigned_driver: row.assigned_driver,
-								assigned_idx: row.idx,
-								amount: row.amount,
-								expected_loading_date: row.expected_loading_date,
-								container_number: row.container_number,
-								units: row.units,
-								transporter_type: row.transporter_type,
-								sub_contractor: row.sub_contractor,
-								vehicle_plate_number: row.vehicle_plate_number,
-								trailer_plate_number: row.trailer_plate_number,
-								driver_name: row.driver_name,
-								passport_number: row.passport_number,
-								route: row.route,
-							},
-							callback: function(data){
-								console.log(data.message);
-							}
-						});
-					});
-					cur_frm.page.clear_indicator();
-				}
-				else
-				{
-					//If not all data has been entered
-					msgprint("Please fill all required fields in assigned vehicle table", "Error");
-				}
-			});
-		}*/
 	},
 
 	show_hide_assignment: function (frm, cdt, cdn) {
 		//Processed row
 		var row = frm.fields_dict['assign_transport'].grid.grid_rows_by_docname[cdn];
 
-		// //Show/hide container specific information
-		// if (frm.doc.cargo_type == 'Container') {
-		// 	row.toggle_display('cargo', false);
-		// 	row.toggle_display('container_number', true);
-		// 	row.toggle_display('amount', false);
-		// 	row.toggle_display('units', false);
-		// }
-		// else {
-		// 	row.toggle_display('cargo', false);
-		// 	row.toggle_display('container_number', false);
-		// 	row.toggle_display('amount', true);
-		// 	row.toggle_display('units', true);
-		// }
 
 		//Make editable according to request origin
 		if (frm.doc.reference_docname) {
@@ -167,198 +105,76 @@ frappe.ui.form.on('Transportation Order', {
 		//Hide the extra info section
 		row.toggle_display('section_extra', false);
 
-		//Show, hide and enable entries according to the transporter type
-		if (locals[cdt][cdn].transporter_type == "Sub-Contractor" || locals[cdt][cdn].transporter_type == "Self Drive") {
-			//Show the sub-contractor select box
-			row.toggle_display("sub_contractor", (locals[cdt][cdn].transporter_type == "Sub-Contractor"));
-			//Enter vehicle details
-			row.toggle_display("assigned_vehicle", false);
-			row.toggle_editable("vehicle_plate_number", true);
-			//Vehicle Documents
-			//row.toggle_display("section_vehicle_attachments", true);
-			for (var i = 1; i < 5; i++) {
-				row.toggle_editable("attach_" + i, true);
-				row.toggle_editable("description_" + i, true);
-			}
-			//Trailor Details
-			row.toggle_display("assigned_trailer", false);
-			row.toggle_editable("trailer_plate_number", (locals[cdt][cdn].transporter_type == "Sub-Contractor"));
-			//Driver Details
-			row.toggle_display("assigned_driver", false);
-			row.toggle_editable("driver_name", true);
-			row.toggle_editable("passport_number", true);
-			row.toggle_editable("driver_licence", true);
-			row.toggle_editable("driver_contact", true);
-		}
-		else if (locals[cdt][cdn].transporter_type == "Bravo") {
-			//Hide the sub-contractor select box
-			row.toggle_display("sub_contractor", false);
-			//Enter vehicle details
-			row.toggle_display("assigned_vehicle", true);
-			row.toggle_editable("assigned_vehicle", true);
-			row.toggle_editable("vehicle_plate_number", false);
-			//Vehicle Documents
-			//row.toggle_display("section_vehicle_attachments", true);
-			for (var i = 1; i < 5; i++) {
-				row.toggle_editable("attach_" + i, false);
-				row.toggle_editable("description_" + i, false);
-			}
-			//Trailor Details
-			row.toggle_display("assigned_trailer", true);
-			row.toggle_editable("assigned_trailer", true);
-			row.toggle_editable("trailer_plate_number", false);
-			//Driver Details
-			row.toggle_display("assigned_driver", true);
-			row.toggle_editable("assigned_driver", true);
-			row.toggle_editable("driver_name", false);
-			row.toggle_editable("passport_number", false);
-			row.toggle_editable("driver_licence", true);
-			row.toggle_editable("driver_contact", true);
-		}
-		else {
-			//Hide the sub-contractor select box
-			row.toggle_display("sub_contractor", false);
-			//Enter vehicle details
-			row.toggle_display("assigned_vehicle", true);
-			row.toggle_editable("assigned_vehicle", true);
-			row.toggle_editable("vehicle_plate_number", false);
-			//Vehicle Documents
-			for (var i = 1; i < 5; i++) {
-				row.toggle_editable("attach_" + i, false);
-				row.toggle_editable("description_" + i, false);
-			}
-			//Trailor Details
-			row.toggle_display("assigned_trailer", true);
-			row.toggle_editable("assigned_trailer", true);
-			//Driver Details
-			row.toggle_display("assigned_driver", true);
-			row.toggle_editable("assigned_driver", true);
-		}
+		// //Show, hide and enable entries according to the transporter type
+		// if (locals[cdt][cdn].transporter_type == "Sub-Contractor" || locals[cdt][cdn].transporter_type == "Self Drive") {
+		// 	//Show the sub-contractor select box
+		// 	row.toggle_display("sub_contractor", (locals[cdt][cdn].transporter_type == "Sub-Contractor"));
+		// 	//Enter vehicle details
+		// 	row.toggle_display("assigned_vehicle", false);
+		// 	row.toggle_editable("vehicle_plate_number", true);
+		// 	//Vehicle Documents
+		// 	//row.toggle_display("section_vehicle_attachments", true);
+		// 	for (var i = 1; i < 5; i++) {
+		// 		row.toggle_editable("attach_" + i, true);
+		// 		row.toggle_editable("description_" + i, true);
+		// 	}
+		// 	//Trailor Details
+		// 	row.toggle_display("assigned_trailer", false);
+		// 	row.toggle_editable("trailer_plate_number", (locals[cdt][cdn].transporter_type == "Sub-Contractor"));
+		// 	//Driver Details
+		// 	row.toggle_display("assigned_driver", false);
+		// 	row.toggle_editable("driver_name", true);
+		// 	row.toggle_editable("passport_number", true);
+		// 	row.toggle_editable("driver_licence", true);
+		// 	row.toggle_editable("driver_contact", true);
+		// }
+		// else if (locals[cdt][cdn].transporter_type == "Bravo") {
+		// 	//Hide the sub-contractor select box
+		// 	row.toggle_display("sub_contractor", false);
+		// 	//Enter vehicle details
+		// 	row.toggle_display("assigned_vehicle", true);
+		// 	row.toggle_editable("assigned_vehicle", true);
+		// 	row.toggle_editable("vehicle_plate_number", false);
+		// 	//Vehicle Documents
+		// 	//row.toggle_display("section_vehicle_attachments", true);
+		// 	for (var i = 1; i < 5; i++) {
+		// 		row.toggle_editable("attach_" + i, false);
+		// 		row.toggle_editable("description_" + i, false);
+		// 	}
+		// 	//Trailor Details
+		// 	row.toggle_display("assigned_trailer", true);
+		// 	row.toggle_editable("assigned_trailer", true);
+		// 	row.toggle_editable("trailer_plate_number", false);
+		// 	//Driver Details
+		// 	row.toggle_display("assigned_driver", true);
+		// 	row.toggle_editable("assigned_driver", true);
+		// 	row.toggle_editable("driver_name", false);
+		// 	row.toggle_editable("passport_number", false);
+		// 	row.toggle_editable("driver_licence", true);
+		// 	row.toggle_editable("driver_contact", true);
+		// }
+		// else {
+		// 	//Hide the sub-contractor select box
+		// 	row.toggle_display("sub_contractor", false);
+		// 	//Enter vehicle details
+		// 	row.toggle_display("assigned_vehicle", true);
+		// 	row.toggle_editable("assigned_vehicle", true);
+		// 	row.toggle_editable("vehicle_plate_number", false);
+		// 	//Vehicle Documents
+		// 	for (var i = 1; i < 5; i++) {
+		// 		row.toggle_editable("attach_" + i, false);
+		// 		row.toggle_editable("description_" + i, false);
+		// 	}
+		// 	//Trailor Details
+		// 	row.toggle_display("assigned_trailer", true);
+		// 	row.toggle_editable("assigned_trailer", true);
+		// 	//Driver Details
+		// 	row.toggle_display("assigned_driver", true);
+		// 	row.toggle_editable("assigned_driver", true);
+		// }
 	},
 
-	// cargo_type: function (frm) {
-	// 	frm.events.hide_show_cargo(frm);
-	// },
 
-	// hide_show_cargo: function (frm) {
-	// 	if (frm.doc.cargo_type == "") {
-	// 		frm.toggle_display('cargo', false);
-	// 		frm.toggle_display('amount', false);
-	// 		frm.toggle_display('unit', false);
-	// 		frm.toggle_display('number_of_vehicles', false);
-	// 		frm.toggle_display('html1', false);
-	// 		frm.toggle_display('goods_description', false);
-	// 		frm.toggle_display('cargo_description', false);
-	// 		frm.toggle_display('section_vehicle_assignment', false);
-	// 	}
-	// 	else if (frm.doc.cargo_type == "Container") {
-	// 		frm.toggle_display('cargo', true);
-	// 		frm.toggle_display('amount', false);
-	// 		frm.toggle_display('unit', false);
-	// 		frm.toggle_display('number_of_vehicles', false);
-	// 		frm.toggle_display('html1', true);
-	// 		frm.toggle_display('goods_description', true);
-	// 		frm.toggle_display('cargo_description', true);
-	// 		frm.toggle_display('section_vehicle_assignment', true);
-	// 	}
-	// 	else {
-	// 		frm.toggle_display('cargo', false);
-	// 		frm.toggle_display('amount', true);
-	// 		frm.toggle_display('unit', true);
-	// 		frm.toggle_display('number_of_vehicles', true);
-	// 		frm.toggle_display('html1', false);
-	// 		frm.toggle_display('goods_description', true);
-	// 		frm.toggle_display('cargo_description', true);
-	// 		frm.toggle_display('section_vehicle_assignment', true);
-	// 	}
-	// },
-
-	/* validate: function (frm) {
-		if (!frm.events.validate_assignment(frm)) {
-			frappe.msgprint("Please enter all required fields in vehicle assignement table.");
-			frappe.validated = false;
-		}
-	},
-
-	validate_assignment: function (frm) {
-		var valid = true;
-		//Validate that all required entries are entered in vehicle assignment table
-		console.log(frm.doc.assign_transport.length);
-		frm.doc.assign_transport.forEach(function (row) {
-			if (frm.doc.cargo_type == 'Container') {
-				if (row.cargo && row.route)  //Check cargo and route entered
-				{
-					if (row.transporter_type == "Sub-Contractor") {
-						if (row.vehicle_plate_number && row.trailer_plate_number && row.driver_name && row.passport_number) {
-							//Its all good, go to the next row
-						}
-						else {
-							valid = false;
-							return false;
-						}
-					}
-					else {
-						if (row.assigned_vehicle && row.assigned_trailer && row.assigned_driver) {
-							//Its all good, go to the next row
-						}
-						else {
-							valid = false;
-							return false;
-						}
-					}
-				}
-				else {
-					valid = false;
-					return false;
-				}
-			}
-			else {
-				if (row.amount > 0 && row.units && row.route)  //Check cargo and route entered
-				{
-					if (row.transporter_type == "Sub-Contractor") {
-						if (row.vehicle_plate_number && row.trailer_plate_number && row.driver_name && row.passport_number) {
-							//Its all good, go to the next row
-						}
-						else {
-							valid = false;
-							return false;
-						}
-					}
-					else if (row.transporter_type == "Self Drive") {
-						if (row.vehicle_plate_number && row.driver_name && row.passport_number) {
-							//Its all good, go to the next row
-						}
-						else {
-							valid = false;
-							return false;
-						}
-					}
-					else {
-						if (row.assigned_vehicle && row.assigned_trailer && row.assigned_driver) {
-							//Its all good, go to the next row
-						}
-						else {
-							valid = false;
-							return false;
-						}
-					}
-				}
-				else {
-					valid = false;
-					return false;
-				}
-			}
-		});
-
-		//If the process is not interrupted, then all is well and return true
-		if (valid == true) {
-			return true;
-		}
-		else {
-			return false;
-		}
-	},
-*/
 	calculate_total_assigned: function (frm) {
 		if (frm.doc.cargo_type == 'Loose Cargo' && frm.doc.assign_transport.length > 0) {
 			frm.toggle_display('total_assigned', true);
@@ -543,10 +359,17 @@ frappe.ui.form.on("Transport Assignment", {
 							reference_doctype: "Transport Assignment",
 							reference_docname: doc.name,
 							vehicle: doc.assigned_vehicle,
-							transporter: doc.transporter_type,
+							transporter_type: doc.transporter_type,
+							sub_contractor: doc.sub_contractor,
+							assigned_vehicle: doc.assigned_vehicle,
+							vehicle_plate_number: doc.vehicle_plate_number,
+							assigned_trailer: doc.assigned_trailer,
+							trailer_plate_number: doc.trailer_plate_number,
 							cargo: doc.cargo,
 							driver: doc.assigned_driver,
-							customer: doc.customer
+							driver_name: doc.driver_name,
+							customer: doc.customer,
+							invoice_number: doc.invoice
 						},
 						callback: function (data) {
 							console.log(data);
@@ -565,10 +388,18 @@ frappe.ui.form.on("Transport Assignment", {
 					reference_doctype: "Transport Assignment",
 					reference_docname: doc.name,
 					vehicle: doc.assigned_vehicle,
-					transporter: doc.transporter_type,
+					transporter_type: doc.transporter_type,
+					sub_contractor: doc.sub_contractor,
+					assigned_vehicle: doc.assigned_vehicle,
+					vehicle_plate_number: doc.vehicle_plate_number,
+					assigned_trailer: doc.assigned_trailer,
+					trailer_plate_number: doc.trailer_plate_number,
 					cargo: doc.cargo,
+					assign_transport: doc.assign_transport,
 					driver: doc.assigned_driver,
-					customer: doc.customer
+					driver_name: doc.driver_name,
+					customer: doc.customer,
+					invoice_number: doc.invoice
 				},
 				callback: function (data) {
 					console.log(data);
@@ -579,7 +410,6 @@ frappe.ui.form.on("Transport Assignment", {
 			});
 		}
 	}
-
 });
 
 
@@ -605,13 +435,6 @@ cur_frm.cscript.assign_transport = function (frm) {
 				new_row.customer = cur_frm.doc.customer;
 				frappe.model.set_value(new_row.doctype, new_row.name, "currency", transport_currency);
 				new_row.expected_loading_date = cur_frm.doc.loading_date;
-				// new_row.file_number = cur_frm.doc.file_number;
-				// if (cur_frm.doc.reference_doctype == 'Import') {
-				// 	new_row['import'] = cur_frm.doc.reference_docname;
-				// }
-				// else if (cur_frm.reference_doctype == 'Export') {
-				// 	new_row['export'] = cur_frm.doc.reference_docname;
-				// }
 				cur_frm.refresh_field("assign_transport");
 			}
 		});

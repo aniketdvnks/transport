@@ -6,6 +6,7 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "date",
   "transporter_type",
   "sub_contractor",
   "vehicle",
@@ -18,6 +19,7 @@
   "passport_number",
   "driving_licence_no",
   "phone_number",
+  "invoice_number",
   "section_break_13",
   "customer",
   "section_main_trip",
@@ -312,6 +314,7 @@
    "options": "Vehicle Trip Location Update"
   },
   {
+   "depends_on": "eval:doc.transporter_type == 'In House'",
    "fieldname": "section_main_fuel_request",
    "fieldtype": "Section Break",
    "label": "Main Trip Fuel Request"
@@ -328,9 +331,10 @@
    "options": "Fuel Request Table"
   },
   {
+   "depends_on": "eval:doc.transporter_type == 'In House'",
    "fieldname": "section_main_requested_funds",
    "fieldtype": "Section Break",
-   "label": "Main Trip Requested Funds"
+   "label": "Main Trip Requested Fundseval:doc.transporter_type == 'In House'"
   },
   {
    "fieldname": "main_requested_funds",
@@ -450,10 +454,12 @@
    "print_hide": 1
   },
   {
+   "depends_on": "eval:doc.transporter_type == 'In House'",
    "fieldname": "section_break_54",
    "fieldtype": "Section Break"
   },
   {
+   "depends_on": "eval:doc.transporter_type == 'In House'",
    "fetch_from": "main_route.total_fuel_consumption_qty",
    "fetch_if_empty": 1,
    "fieldname": "fuel_stock_out",
@@ -546,15 +552,29 @@
   {
    "fieldname": "section_break_44",
    "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "invoice_number",
+   "fieldtype": "Link",
+   "label": "Invoice Number",
+   "options": "Sales Invoice"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date",
+   "reqd": 1
   }
  ],
  "in_create": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2022-12-27 18:08:03.837444",
+ "modified": "2023-02-23 12:40:13.530143",
  "modified_by": "Administrator",
  "module": "Transport Management",
  "name": "Vehicle Trip",
+ "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [
   {
@@ -572,5 +592,6 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
+ "states": [],
  "track_changes": 1
 }
