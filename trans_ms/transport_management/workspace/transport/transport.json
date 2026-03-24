@@ -236,7 +236,7 @@
    "type": "Link"
   }
  ],
- "modified": "2026-03-24 16:20:49.142166",
+ "modified": "2026-03-24 17:45:27.657037",
  "modified_by": "Administrator",
  "module": "Transport Management",
  "name": "Transport",
@@ -251,6 +251,12 @@
   },
   {
    "role": "System Manager"
+  },
+  {
+   "role": "Transport Manager"
+  },
+  {
+   "role": "Transport Operator"
   }
  ],
  "sequence_id": 5.0,

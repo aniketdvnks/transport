@@ -9,34 +9,49 @@ import datetime
 from frappe.model.document import Document
 from frappe import _, msgprint
 from frappe.model.mapper import get_mapped_doc
-from frappe.utils import nowdate
+from frappe.utils import flt, nowdate
 from trans_ms.utlis.dimension import set_dimension
 
 
 class FuelRequest(Document):
     def onload(self):
-        trip = frappe.get_doc(self.reference_doctype, self.reference_docname)
+        trip = self.get_reference_trip()
+        if not trip:
+            return
+
         # Load approved fuel for main trip
         if trip.main_route and trip.vehicle:
-            consumption = frappe.db.get_value(
-                "Vehicle", trip.vehicle, "trans_ms_fuel_consumption"
+            consumption = flt(
+                frappe.db.get_value("Vehicle", trip.vehicle, "trans_ms_fuel_consumption")
             )
-            route = frappe.db.get_value("Trip Route", trip.main_route, "total_distance")
+            route = flt(frappe.db.get_value("Trip Route", trip.main_route, "total_distance"))
             approved_fuel = consumption * route
             self.set("main_route", trip.main_route)
             self.set("main_approved_fuel", str(approved_fuel) + " Litres")
 
         # Load approved fuel for return trip
         if trip.return_route and trip.vehicle:
-            consumption = frappe.db.get_value(
-                "Vehicle", trip.vehicle, "trans_ms_fuel_consumption"
+            consumption = flt(
+                frappe.db.get_value("Vehicle", trip.vehicle, "trans_ms_fuel_consumption")
             )
-            route = frappe.db.get_value(
-                "Trip Route", trip.return_route, "total_distance"
-            )
+            route = flt(frappe.db.get_value("Trip Route", trip.return_route, "total_distance"))
             approved_fuel = consumption * route
             self.set("return_route", trip.return_route)
             self.set("return_approved_fuel", str(approved_fuel) + " Litres")
+
+    def get_reference_trip(self):
+        if not self.reference_doctype or not self.reference_docname:
+            return None
+
+        if not isinstance(self.reference_doctype, str) or not isinstance(
+            self.reference_docname, str
+        ):
+            return None
+
+        if not frappe.db.exists(self.reference_doctype, self.reference_docname):
+            return None
+
+        return frappe.get_doc(self.reference_doctype, self.reference_docname)
 
     def get_all_children(self, parenttype=None):
         # For getting children
@@ -208,6 +223,14 @@ def set_status(doc):
         parent_request_doc.db_set("status", "Waiting Approval")
     else:
         parent_request_doc.db_set("status", status)
+
+
+@frappe.whitelist(allow_guest=True)
+def set_statust(**kwargs):
+    docname = kwargs.get("doc") or kwargs.get("request_docname")
+    if docname:
+        return set_status(docname)
+    return None
 
 
 @frappe.whitelist(allow_guest=True)

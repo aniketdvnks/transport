@@ -57,7 +57,8 @@ app_license = "MIT"
 # ------------
 
 # before_install = "trans_ms.install.before_install"
-# after_install = "trans_ms.install.after_install"
+after_install = "trans_ms.transport_management.security.sync_transport_security"
+after_migrate = "trans_ms.transport_management.security.sync_transport_security"
 
 # Desk Notifications
 # ------------------

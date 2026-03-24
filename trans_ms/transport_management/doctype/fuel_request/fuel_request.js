@@ -98,34 +98,25 @@ frappe.ui.form.on('Fuel Request Table', {
 cur_frm.cscript.approve_request = function (frm) {
     var selected = cur_frm.get_selected();
     if (selected['requested_fuel']) {
+        const selectedRows = selected['requested_fuel'];
         frappe.confirm(
             'Confirm: Approve selected requests?',
             function () {
-                $.each(selected['requested_fuel'], function (index, value) {
-                    frappe.call({
+                Promise.all(selectedRows.map((value) => frappe.call({
                         method: "trans_ms.transport_management.doctype.fuel_request.fuel_request.approve_request",
                         freeze: true,
                         args: {
                             request_doctype: "Fuel Request Table",
                             request_docname: value,
                             user: frappe.user.full_name()
-                        },
-                        callback: function (data) {
-                            //alert(JSON.stringify(data));
                         }
-                    });
-                });
-                frappe.call({
-                    method: "trans_ms.transport_management.doctype.fuel_request.fuel_request.set_statust",
+                    }))).then(() => frappe.call({
+                    method: "trans_ms.transport_management.doctype.fuel_request.fuel_request.set_status",
                     freeze: true,
                     args: {
-                        request_doctype: "Fuel Request Table",
-                    },
-                    callback: function (data) {
-                        //alert(JSON.stringify(data));
+                        doc: selectedRows[0],
                     }
-                });
-                location.reload();
+                })).then(() => location.reload());
             },
             function () {
                 //Do nothing
@@ -141,34 +132,25 @@ cur_frm.cscript.reject_request = function (frm) {
     //cur_frm.cscript.populate_child(cur_frm.doc.reference_doctype, cur_frm.doc.reference_docname);
     var selected = cur_frm.get_selected();
     if (selected['requested_fuel']) {
+        const selectedRows = selected['requested_fuel'];
         frappe.confirm(
             'Confirm: Reject selected requests?',
             function () {
-                $.each(selected['requested_fuel'], function (index, value) {
-                    frappe.call({
-                        method: "fleet_management.fleet_management.doctype.fuel_request.fuel_request.reject_request",
+                Promise.all(selectedRows.map((value) => frappe.call({
+                        method: "trans_ms.transport_management.doctype.fuel_request.fuel_request.reject_request",
                         freeze: true,
                         args: {
                             request_doctype: "Fuel Request Table",
                             request_docname: value,
                             user: frappe.user.full_name()
-                        },
-                        callback: function (data) {
-                            //alert(JSON.stringify(data));
                         }
-                    });
-                });
-                frappe.call({
-                    method: "trans_ms.transport_management.doctype.fuel_request.fuel_request.set_statust",
+                    }))).then(() => frappe.call({
+                    method: "trans_ms.transport_management.doctype.fuel_request.fuel_request.set_status",
                     freeze: true,
                     args: {
-                        request_doctype: "Fuel Request Table",
-                    },
-                    callback: function (data) {
-                        //alert(JSON.stringify(data));
+                        doc: selectedRows[0],
                     }
-                });
-                location.reload();
+                })).then(() => location.reload());
             },
             function () {
                 //Do nothing
