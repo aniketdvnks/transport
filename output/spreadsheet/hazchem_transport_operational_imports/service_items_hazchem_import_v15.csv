@@ -1,0 +1,5 @@
+ID,Item Code,Item Name,Item Group,Default Unit of Measure,Maintain Stock,Allow Sales,Description,Disabled
+HAZ-NAOCL-TNK,HAZ-NAOCL-TNK,Hazchem Tanker Service - Sodium Hypochlorite,Services,Nos,0,1,Dedicated tanker haulage service for sodium hypochlorite movements.,0
+HAZ-H2SO4-TNK,HAZ-H2SO4-TNK,Hazchem Tanker Service - Sulphuric Acid,Services,Nos,0,1,Dedicated tanker haulage service for sulphuric acid corridors.,0
+HAZ-HCL-TNK,HAZ-HCL-TNK,Hazchem Tanker Service - Hydrochloric Acid,Services,Nos,0,1,Dedicated tanker haulage service for hydrochloric acid movements.,0
+HAZ-LCS-TNK,HAZ-LCS-TNK,Hazchem Tanker Service - Liquid Caustic Soda,Services,Nos,0,1,Dedicated tanker haulage service for liquid caustic soda movements.,0

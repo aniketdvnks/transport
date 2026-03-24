@@ -1,0 +1,17 @@
+ID,Route Name,Total Distance (km),Total Fuel Consumption Qty (Ltr.),ID (trip_steps),Location (trip_steps),Distance (trip_steps),Location Type (trip_steps),Fuel Consumption Qty (Ltr.) (trip_steps)
+Bharuch Tank Farm to Taloja Tank Farm,Bharuch Tank Farm to Taloja Tank Farm,430,160,faq3psihan,Bharuch Industrial Tank Farm,0.0,LOADING POINT,0.0
+,,,,faqnlsehpk,Nova Taloja Tank Farm,430.0,offloading point,160.0
+Dahej Plant to Panipat Plant,Dahej Plant to Panipat Plant,1135,395,fap0622vks,Apex Chlorochem Dahej Plant,0.0,LOADING POINT,0.0
+,,,,faplhar7og,Panipat Process Plant,1135.0,offloading point,395.0
+Nagothane Complex to Sanand Park,Nagothane Complex to Sanand Park,640,230,faoto7ep6k,Nagothane Chemical Complex,0.0,LOADING POINT,0.0
+,,,,faonqetqid,Sanand Specialty Park,640.0,offloading point,230.0
+Jhagadia Estate to Vadodara Depot,Jhagadia Estate to Vadodara Depot,72,28,faneaic4e0,Jhagadia Industrial Estate,0.0,LOADING POINT,0.0
+,,,,fanafs52bf,Vadodara Chlor Alkali Depot,72.0,offloading point,28.0
+Hazira Terminal to Panipat Plant,Hazira Terminal to Panipat Plant,1210,420,fam299ljc6,Hazira Bulk Terminal,0.0,LOADING POINT,0.0
+,,,,fampursk3v,Panipat Process Plant,1210.0,offloading point,420.0
+Bharuch Tank Farm to Pithampur Hub,Bharuch Tank Farm to Pithampur Hub,525,190,falb3kl28h,Bharuch Industrial Tank Farm,0.0,LOADING POINT,0.0
+,,,,falufspdtm,Pithampur Chemical Hub,525.0,offloading point,190.0
+Dahej Plant to Jhagadia Estate,Dahej Plant to Jhagadia Estate,90,34,fakclmr701,Apex Chlorochem Dahej Plant,0.0,LOADING POINT,0.0
+,,,,fakcc3ls7l,Jhagadia Industrial Estate,90.0,offloading point,34.0
+Dahej Plant to Taloja Tank Farm,Dahej Plant to Taloja Tank Farm,580,210,fahr1v63et,Apex Chlorochem Dahej Plant,0.0,LOADING POINT,0.0
+,,,,fah1m65erv,Nova Taloja Tank Farm,580.0,offloading point,210.0

@@ -1,0 +1,304 @@
+source_row,suggested_doctype,reason,PartyName,PartyRole,PartyAlias,Address1,Address2,Address3,Address4,PlaceName,GSTNo,PANNo,AccCode
+3,Manual Review,"Role mixes party and ledger-style records, so it was not auto-imported.",Tools Verification,STORE,,,,,,,,,
+146,Account,This role looks like a ledger or account head rather than a party master.,Transport Sales,Income Head,Transport Sales,,,,,VADODARA,,,Transport Sales
+221,Account,This role looks like a ledger or account head rather than a party master.,DIESEL ADVANCE,Trip Expense Ledger,DIESEL ADVANCE,,,,,,,,DIESEL - TANKER
+222,Account,This role looks like a ledger or account head rather than a party master.,TRIP ADVANCE,Trip Expense Ledger,TRIP ADVANCE,,,,,,,,TRIP ADVANCE
+231,Account,This role looks like a ledger or account head rather than a party master.,FUEL EXPENSES,Expense,FUEL EXPENSES,,,,,,,,FUEL EXPENSES
+235,Manual Review,No safe default ERPNext master mapping was inferred.,Appolo,Tyre Manufacturer,Appolo,,,,,,,,Appolo
+240,Manual Review,No safe default ERPNext master mapping was inferred.,CEAT TYRE,Tyre Manufacturer,CEAT TYRE,,,,,VADODARA,,,CEAT TYRE
+241,Account,This role looks like a ledger or account head rather than a party master.,TANKER TYRE (28%),Expense,TANKER TYRE (28%),,,,,VADODARA,,,TANKER TYRE (28%)
+242,Manual Review,No safe default ERPNext master mapping was inferred.,INNOVATIVE TYRES,Tyre Manufacturer,INNOVATIVE TYRES,,,,,VADODARA,,,INNOVATIVE TYRES
+243,Manual Review,No safe default ERPNext master mapping was inferred.,MICHELIN,Tyre Manufacturer,MICHELIN,,,,,,,,MICHELIN
+246,Manual Review,No safe default ERPNext master mapping was inferred.,NG ECO,Tyre Manufacturer,,,,,,,,,NG ECO
+247,Manual Review,No safe default ERPNext master mapping was inferred.,JK TYRES,Tyre Manufacturer,,,,,,,,,JK TYRES
+248,Manual Review,No safe default ERPNext master mapping was inferred.,MRF,Tyre Manufacturer,MRF,,,,,,,,MRF
+249,Manual Review,No safe default ERPNext master mapping was inferred.,APOLLO TYRES,Tyre Manufacturer,,,,,,,,,APOLLO TYRES
+251,Manual Review,No safe default ERPNext master mapping was inferred.,INNOVATIVE,Tyre Manufacturer,,,,,,,,,INNOVATIVE
+252,Manual Review,No safe default ERPNext master mapping was inferred.,BRIDGESTONE,Tyre Manufacturer,BRIDGESTONE,,,,,,,,BRIDGESTONE
+255,Manual Review,No safe default ERPNext master mapping was inferred.,VIKRANT,Tyre Manufacturer,,,,,,,,,VIKRANT
+256,Account,This role looks like a ledger or account head rather than a party master.,TOLL TAX,Expense,TOLL TAX,,,,,VADODARA,,,TOLL TAX
+258,Account,This role looks like a ledger or account head rather than a party master.,CASH BACK - FAST TAG TOLL,Account Group,CASH BACK - FAST TAG TOLL,,,,,VADODARA,,,CASH BACK - FAST TAG TOLL
+260,Account,This role looks like a ledger or account head rather than a party master.,TANKER PARTS,Expense,TANKER PARTS,,,,,,,,TANKER PARTS
+261,Account,This role looks like a ledger or account head rather than a party master.,T.D.S.,Tax Receivable,T.D.S.,,,,,,,,T.D.S.
+262,Vehicle,Source row does not include the required ERPNext Vehicle fields.,N/A,Vehicle,N/A,,,,,,,,N/A
+297,Manual Review,"Role mixes party and ledger-style records, so it was not auto-imported.",VA TECH VENTURES PVT LTD.,BRANCH,VA TECH VENTURES PVT LTD.,,,,,KARNATAKA,29AAECV1948B2ZB,AAECV1948B,VA TECH VENTURES PVT LTD.
+321,Account,This role looks like a ledger or account head rather than a party master.,SHREE SHIV AGRO - BARODA(TOLL),Expense,SHREE SHIV AGRO - BARODA(TOLL),,,,,VADODARA,24ACAPP8076D1ZO,ACAPP8076D,SHREE SHIV AGRO - BARODA
+326,Vehicle,Source row does not include the required ERPNext Vehicle fields.,.,Vehicle,.,,,,,,24AABCN8697C1ZB,AABCN8697C,.
+328,Manual Review,This row is incomplete and needs manual cleanup.,0,Operator,0,,,,,VADODARA,,,0
+329,Account,This role looks like a ledger or account head rather than a party master.,INTEREST EXP,Interestaccount,INTEREST EXP,,,,,VADODARA,,,INTEREST EXP
+330,Account,This role looks like a ledger or account head rather than a party master.,Loan Account,Loanaccount,Loan Account,,,,,VADODARA,,,Loan Account
+334,Account,This role looks like a ledger or account head rather than a party master.,MIS. OFFICE EXP,Expense,MIS. OFFICE EXP,,,,,VADODARA,,,MIS. OFFICE EXP
+345,Account,This role looks like a ledger or account head rather than a party master.,CITI BANK - BT-7290,Loanaccount,CITI BANK - BT-7290,,,,,VADODARA,,,CITI BANK - BT-7290
+346,Account,This role looks like a ledger or account head rather than a party master.,CITI BANK - BT-6588,Loanaccount,CITI BANK - BT-6588,,,,,VADODARA,,,CITI BANK - BT-6588
+356,Account,This role looks like a ledger or account head rather than a party master.,Output SGST,Income Head,,,,,,,,,SGST
+357,Account,This role looks like a ledger or account head rather than a party master.,CGST 6%,Income Head,,,,,,,,,CGST @ 6%
+358,Account,This role looks like a ledger or account head rather than a party master.,IGST 18%,Income Head,,,,,,,,,IGST @ 12%
+381,Account,This role looks like a ledger or account head rather than a party master.,INSURANCE EXP,Expense,INSURANCE EXP,,,,,,,,INSURANCE EXP
+385,Account,This role looks like a ledger or account head rather than a party master.,Deduction Ledger,Deduction Ledger,Deduction Ledger,,,,,,,,Deduction Ledger
+387,Account,This role looks like a ledger or account head rather than a party master.,SHORTAGE EXP,Deduction Ledger,SHORTAGE EXP,,,,,VADODARA,,,SHORTAGE EXP
+417,Account,This role looks like a ledger or account head rather than a party master.,Round Off,Income Head,Round Off,,,,,,,,Round Off
+465,Manual Review,"Role mixes party and ledger-style records, so it was not auto-imported.",DRIVER SALARY,BRANCH,DRIVER SALARY,,,,,VADODARA,,,DRIVER SALARY
+478,Account,This role looks like a ledger or account head rather than a party master.,BANK CHARGES,Expense,BANK CHARGES,,,,,,,,BANK CHARGES
+479,Manual Review,"Role mixes party and ledger-style records, so it was not auto-imported.",SHREE SHIV TRANSPORT.,BRANCH,SHREE SHIV TRANSPORT.,,,,,,,,SHREE SHIV TRANSPORT
+482,Manual Review,"Role mixes party and ledger-style records, so it was not auto-imported.",CASH,BRANCH,CASH,,,,,,,,CASH
+486,Account,This role looks like a ledger or account head rather than a party master.,TRANSPORT CHARGES PAID (6%),Hire Purchase Account,TRANSPORT CHARGES PAID (6%),,,,,,,,TRANSPORT CHARGES PAID (6%)
+513,Account,This role looks like a ledger or account head rather than a party master.,P.U.C EXP,Expense,P.U.C EXP,,,,,VADODARA,,,P.U.C EXP
+529,Manual Review,No safe default ERPNext master mapping was inferred.,BIRLA,Tyre Manufacturer,BIRLA,,,,,VADODARA,,,BIRLA
+530,Account,This role looks like a ledger or account head rather than a party master.,DIESEL - TANKER,Expense,DIESEL - TANKER,,,,,,,,DIESEL - TANKER
+531,Account,This role looks like a ledger or account head rather than a party master.,RATE DIFFRANCE,Deduction Ledger,RATE DIFFRANCE,,,,,,,,RATE DIFFRANCE
+541,Account,This role looks like a ledger or account head rather than a party master.,PRINTING & STATIONARY EXP A/C.,Expense,PRINTING & STATIONARY EXP A/C.,,,,,,,,PRINTING & STATIONARY EXP A/C.
+559,Account,This role looks like a ledger or account head rather than a party master.,MATERIAL SHORTAGE.,Income Head,MATERIAL SHORTAGE.,,,,,,,,MATERIAL SHORTAGE
+587,Account,This role looks like a ledger or account head rather than a party master.,FITNESS,Expense,FITNESS,,,,,,,,FITNESS
+588,Account,This role looks like a ledger or account head rather than a party master.,CHEMICAL CARD,Expense,CHEMICAL CARD,,,,,,,,CHEMICAL CARD
+589,Account,This role looks like a ledger or account head rather than a party master.,A.I.P,Expense,A.I.P,,,,,,,,A.I.P
+590,Account,This role looks like a ledger or account head rather than a party master.,T.C,Expense,T.C,,,,,,,,T.C
+591,Account,This role looks like a ledger or account head rather than a party master.,G.P,Expense,G.P,,,,,,,,G.P
+603,Account,This role looks like a ledger or account head rather than a party master.,TOLL TAX EXP,Expense,TOLL TAX EXP,,,,,VADODARA,,,TOLL TAX EXP
+607,Manual Review,"Role mixes party and ledger-style records, so it was not auto-imported.",TDS DEDUCTED,BRANCH,TDS DEDUCTED,,,,,,,,TDS DEDUCTED
+640,Account,This role looks like a ledger or account head rather than a party master.,RTO TAX,Expense,RTO TAX,,,,,,,,RTO TAX PASSING & N.PERMIT EXP
+667,Account,This role looks like a ledger or account head rather than a party master.,HDFC BANK LTD. - GJ-01-DX-7499,Loanaccount,HDFC BANK LTD. - GJ-01-DX-7499,,,,,,,,HDFC BANK LTD. - GJ-01-DX-7499
+668,Manual Review,"Role mixes party and ledger-style records, so it was not auto-imported.",HDFC BANK LTD. - GJ-01-DX7599,Buyer,HDFC BANK LTD. - GJ-01-DX7599,,,,,,,,HDFC BANK LTD. - GJ-01-DX-7599
+679,Manual Review,"Role mixes party and ledger-style records, so it was not auto-imported.",CAPITAL - MITESH PATEL,Buyer,CAPITAL - MITESH PATEL,,,,,GUJARAT,,,CAPITAL - MITESH PATEL
+681,Account,This role looks like a ledger or account head rather than a party master.,AMERICAN EXPRESS CREDIT CARD,Cash/Bank,AMERICAN EXPRESS CREDIT CARD,,,,,GUJARAT,,,AMERICAN EXPRESS CREDIT CARD
+685,Account,This role looks like a ledger or account head rather than a party master.,CGST-repair,GST Ledger,CGST-repair,,,,,,,,CGST @
+686,Account,This role looks like a ledger or account head rather than a party master.,SGST-repair,GST Ledger,SGST-repair,,,,,,,,SGST @
+687,Account,This role looks like a ledger or account head rather than a party master.,IGST-repair,GST Ledger,IGST-repair,,,,,,,,IGST @
+688,Account,This role looks like a ledger or account head rather than a party master.,TANKER PARTS 28%,Expense,TANKER PARTS 28%,,,,,,,,TANKER PARTS
+689,Account,This role looks like a ledger or account head rather than a party master.,ICICI BANK LTD - MSME LOAN,Loanaccount,ICICI BANK LTD - MSME LOAN,,,,,GUJARAT,,,ICICI BANK LTD - MSME LOAN
+692,Manual Review,"Role mixes party and ledger-style records, so it was not auto-imported.",CAPITAL - RIKESH C. PATEL,Buyer,CAPITAL - RIKESH C. PATEL,,,,,,,,CAPITAL - RIKESH C. PATEL
+694,Account,This role looks like a ledger or account head rather than a party master.,TANKER MIS. REP & MAINT EXP,Expense,TANKER MIS. REP & MAINT EXP,,,,,GUJARAT,,,TANKER MIS. REP & MAINT EXP
+701,Account,This role looks like a ledger or account head rather than a party master.,TDS - 94A,TDS Payable,TDS - 94A,,,,,GUJARAT,,,TDS - 94A
+702,Account,This role looks like a ledger or account head rather than a party master.,TDS - 94C,TDS Payable,TDS - 94C,,,,,GUJARAT,,,TDS - 94C
+703,Account,This role looks like a ledger or account head rather than a party master.,PROFESSIONAL TAX,Tax Payable,PROFESSIONAL TAX,,,,,GUJARAT,,,PROFESSIONAL TAX
+715,Account,This role looks like a ledger or account head rather than a party master.,TANKER PARTS EXP A/C.,Expense,TANKER PARTS EXP A/C.,,,,,,,,TANKER PARTS EXP A/C.
+716,Account,This role looks like a ledger or account head rather than a party master.,TANKER TANK PURCHASE,Expense,TANKER TANK PURCHASE,,,,,,,,TANKER TANK PURCHASE
+717,Account,This role looks like a ledger or account head rather than a party master.,CGST-TYRE,GST Ledger,CGST-TYRE,,,,,,,,CGST @
+718,Account,This role looks like a ledger or account head rather than a party master.,SGST-Tyre,GST Ledger,,,,,,,,,SGST @
+719,Account,This role looks like a ledger or account head rather than a party master.,IGST - Tyre,GST Ledger,,,,,,,,,IGST @
+720,Manual Review,No safe default ERPNext master mapping was inferred.,SUN FULL,Tyre Manufacturer,SUN FULL,,,,,VADODARA,,,SUN FULL
+721,Account,This role looks like a ledger or account head rather than a party master.,TANKER MIS REP & MAINT,Expense,TANKER MIS REP & MAINT,,,,,,,,TANKER MIS REP & MAINT
+723,Account,This role looks like a ledger or account head rather than a party master.,RENT OF USAGE & WEB ACCESS CHARGES,Expense,RENT OF USAGE & WEB ACCESS CHARGES,,,,,,,,RENT OF USAGE & WEB ACCESS CHARGES
+731,Account,This role looks like a ledger or account head rather than a party master.,COMPUTER REP. EXP,Expense,COMPUTER REP. EXP,,,,,VADODARA,,,COMPUTER REP. EXP
+732,Account,This role looks like a ledger or account head rather than a party master.,CAR PARTS EXPENSES (28%),Expense,CAR PARTS EXPENSES (28%),,,,,VADODARA,,,CAR PARTS EXPENSES (28%)
+733,Account,This role looks like a ledger or account head rather than a party master.,TANKER PARTS (IGST),Expense,TANKER PARTS (IGST),,,,,RAJASTHAN,,,TANKER PARTS (IGST)
+734,Manual Review,"Role mixes party and ledger-style records, so it was not auto-imported.",VODAFONE NO. 9427146651,Company,VODAFONE NO. 9427146651,,,,,,,,VODAFONE NO. 9427146651
+737,Account,This role looks like a ledger or account head rather than a party master.,D. M. PATEL (SALARY A/C.),Account Group,D. M. PATEL (SALARY A/C.),,,,,,,,D. M. PATEL (SALARY A/C.)
+738,Account,This role looks like a ledger or account head rather than a party master.,F. R. PATEL (SALRY A/C.),Account Group,F. R. PATEL (SALRY A/C.),,,,,,,,F. R. PATEL (SALRY A/C.)
+739,Manual Review,"Role mixes party and ledger-style records, so it was not auto-imported.",BSNL 2482591,Vendor,BSNL 2482591,,,,,,,,BSNL 2482591
+740,Account,This role looks like a ledger or account head rather than a party master.,STATIONART EXP A/C 18%,Expense,STATIONART EXP A/C 18%,,,,,VADODARA,,,STATIONART EXP A/C 18%
+743,Account,This role looks like a ledger or account head rather than a party master.,Hold Amount,Deduction Ledger,Hold Amount,,,,,,,,Hold Amount
+744,Account,This role looks like a ledger or account head rather than a party master.,YES BANK LTD. - BT - 8099,Loanaccount,YES BANK LTD. - BT - 8099,,,,,,,,YES BANK LTD. - BT - 8099
+745,Manual Review,"Role mixes party and ledger-style records, so it was not auto-imported.",VEHICLE DISCOUNT (28%),BRANCH,VEHICLE DISCOUNT (28%),,,,,,,,VEHICLE DISCOUNT (28%)
+746,Account,This role looks like a ledger or account head rather than a party master.,MEDICAL EXP,Expense,MEDICAL EXP,,,,,VADODARA,,,MEDICAL EXP
+748,Account,This role looks like a ledger or account head rather than a party master.,GST CASH LEDGER,GST Ledger,GST CASH LEDGER,,,,,,,,GST CASH LEDGER
+749,Account,This role looks like a ledger or account head rather than a party master.,AXIS BANK LTD. - GJ-12-BY-2999,Loanaccount,AXIS BANK LTD. - GJ-12-BY-2999,,,,,,,,AXIS BANK LTD. - GJ-12-BY-2999
+750,Account,This role looks like a ledger or account head rather than a party master.,KOTAK MAHINDRA BANK - AV - 4299,Loanaccount,KOTAK MAHINDRA BANK - AV - 4299,,,,,,,,KOTAK MAHINDRA BANK - AV - 4299
+751,Account,This role looks like a ledger or account head rather than a party master.,KOTAK MAHINDRA BANK - AV - 4899,Loanaccount,KOTAK MAHINDRA BANK - AV - 4899,,,,,,,,KOTAK MAHINDRA BANK - AV - 4899
+752,Account,This role looks like a ledger or account head rather than a party master.,KOTAK MAHINDRA BANK - AV - 6381,Loanaccount,KOTAK MAHINDRA BANK - AV - 6381,,,,,,,,KOTAK MAHINDRA BANK - AV - 6381
+753,Account,This role looks like a ledger or account head rather than a party master.,KOTAK MAHINDRA BANK - AV - 7281,Loanaccount,KOTAK MAHINDRA BANK - AV - 7281,,,,,,,,KOTAK MAHINDRA BANK - AV - 7281
+754,Account,This role looks like a ledger or account head rather than a party master.,KOTAK MAHINDRA BANK - AV - 5481,Loanaccount,KOTAK MAHINDRA BANK - AV - 5481,,,,,,,,KOTAK MAHINDRA BANK - AV - 5481
+770,Account,This role looks like a ledger or account head rather than a party master.,VARUN ROADWAYS [EXPENSE,Expense,VARUN ROADWAYS,,,,,,,,VARUN ROADWAYS
+771,Account,This role looks like a ledger or account head rather than a party master.,MAHINDRA FINANCE - AZ 5099,Loanaccount,MAHINDRA FINANCE - AZ 5099,,,,,,,,MAHINDRA FINANCE - AZ 5099
+772,Account,This role looks like a ledger or account head rather than a party master.,MAHINDRA & MAHINDRA FINANCE. - AZ 8799,Loanaccount,MAHINDRA & MAHINDRA FINANCE. - AZ 8799,,,,,,,,MAHINDRA & MAHINDRA FINANCE. - AZ 8799
+773,Account,This role looks like a ledger or account head rather than a party master.,MAHINDRA FINANCE - AZ 9399,Loanaccount,MAHINDRA FINANCE - AZ 9399,,,,,,,,MAHINDRA FINANCE - AZ 9399
+774,Account,This role looks like a ledger or account head rather than a party master.,MAHINDRA FINANCE - AZ 4699,Loanaccount,MAHINDRA FINANCE - AZ 4699,,,,,,,,MAHINDRA FINANCE - AZ 4699
+776,Account,This role looks like a ledger or account head rather than a party master.,SUNDARAM BNP PARIBAS HOME FINANCE LTD - H.E.,Loanaccount,SUNDARAM BNP PARIBAS HOME FINANCE LTD - H.E.,,,,,,,,SUNDARAM BNP PARIBAS HOME FINANCE LTD - H.E.
+777,Account,This role looks like a ledger or account head rather than a party master.,SUNDARAM BNP PARIBAS HOME FINANCE LTD - H.L.,Loanaccount,SUNDARAM BNP PARIBAS HOME FINANCE LTD - H.L.,,,,,,,,SUNDARAM BNP PARIBAS HOME FINANCE LTD - H.L.
+778,Account,This role looks like a ledger or account head rather than a party master.,IDFC BANK - AZ 6273,Loanaccount,IDFC BANK - AZ 6273,,,,,,,,IDFC BANK - AZ 6273
+779,Account,This role looks like a ledger or account head rather than a party master.,AXIS BANK LTD. - BT - 4799,Loanaccount,AXIS BANK LTD. - BT - 4799,,,,,VADODARA,,,AXIS BANK LTD. - BT - 4799
+780,Account,This role looks like a ledger or account head rather than a party master.,AXIS BANK LTD. - BT - 4199,Loanaccount,AXIS BANK LTD. - BT - 4199,,,,,VADODARA,,,AXIS BANK LTD. - BT - 4199
+781,Account,This role looks like a ledger or account head rather than a party master.,AXIS BANK - BT - 6699,Loanaccount,AXIS BANK - BT - 6699,,,,,VADODARA,,,AXIS BANK - BT - 6699
+782,Account,This role looks like a ledger or account head rather than a party master.,AXIS BANK - BT- 7899,Loanaccount,AXIS BANK - BT- 7899,,,,,VADODARA,,,AXIS BANK - BT- 7899
+784,Account,This role looks like a ledger or account head rather than a party master.,AXIS BANK LTD. - BT - 4399,Loanaccount,AXIS BANK LTD. - BT - 4399,,,,,,,,AXIS BANK LTD. - BT - 4399
+785,Account,This role looks like a ledger or account head rather than a party master.,ICICI BANK LTD - AZ 2487,Loanaccount,ICICI BANK LTD - AZ 2487,,,,,VADODARA,,,ICICI BANK LTD - AZ 2487
+786,Account,This role looks like a ledger or account head rather than a party master.,SUNDARAM FINANCE LTD. - AV-8299,Loanaccount,SUNDARAM FINANCE LTD. - AV-8299,,,,,,,,SUNDARAM FINANCE LTD. - AV-8299
+787,Account,This role looks like a ledger or account head rather than a party master.,SUNDARAM FINANCE LTD. - AV-3306 (0563),Loanaccount,SUNDARAM FINANCE LTD. - AV-3306 (0563),,,,,,,,SUNDARAM FINANCE LTD. - AV-3306 (0563)
+788,Account,This role looks like a ledger or account head rather than a party master.,SUNDARAM FINANCE LTD. - AU-7259 (0647),Loanaccount,SUNDARAM FINANCE LTD. - AU-7259 (0647),,,,,VADODARA,,,SUNDARAM FINANCE LTD. - AU-7259 (0647)
+789,Account,This role looks like a ledger or account head rather than a party master.,SUNDARAM FINANCE LTD. - AZ-6471,Loanaccount,SUNDARAM FINANCE LTD. - AZ-6471,,,,,VADODARA,,,SUNDARAM FINANCE LTD. - AZ-6471
+790,Account,This role looks like a ledger or account head rather than a party master.,YES BANK - AZ-6570,Loanaccount,YES BANK - AZ-6570,,,,,VADODARA,,,YES BANK - AZ-6570
+791,Account,This role looks like a ledger or account head rather than a party master.,YES BANK - BT-6399,Loanaccount,YES BANK - BT-6399,,,,,VADODARA,,,YES BANK - BT-6399
+792,Account,This role looks like a ledger or account head rather than a party master.,YES BANK - BT -6499,Loanaccount,YES BANK - BT -6499,,,,,VADODARA,,,YES BANK - BT -6499
+793,Account,This role looks like a ledger or account head rather than a party master.,YES BANK LTD. - BT-5499,Loanaccount,YES BANK LTD. - BT-5499,,,,,VADODARA,,,YES BANK LTD. - BT-5499
+794,Account,This role looks like a ledger or account head rather than a party master.,YES BANK LTD. - BT - 5199,Loanaccount,YES BANK LTD. - BT - 5199,,,,,VADODARA,,,YES BANK LTD. - BT - 5199
+798,Account,This role looks like a ledger or account head rather than a party master.,KOTAK MAHINDRA BANK - BT-5445,Loanaccount,KOTAK MAHINDRA BANK - BT-5445,,,,,VADODARA,,,KOTAK MAHINDRA BANK - BT-5445
+799,Account,This role looks like a ledger or account head rather than a party master.,KOTAK MAHINDRA BANK LTD. - 2377,Loanaccount,KOTAK MAHINDRA BANK LTD. - 2377,,,,,VADODARA,,,KOTAK MAHINDRA BANK LTD. - 2377
+800,Account,This role looks like a ledger or account head rather than a party master.,KOTAK MAHINDRA BANK LTD. - BT-6504,Loanaccount,KOTAK MAHINDRA BANK LTD. - BT-6504,,,,,VADODARA,,,KOTAK MAHINDRA BANK LTD. - BT-6504
+801,Account,This role looks like a ledger or account head rather than a party master.,KOTAK MAHINDRA BANK LTD. - AZ-2599,Loanaccount,KOTAK MAHINDRA BANK LTD. - AZ-2599,,,,,VADODARA,,,KOTAK MAHINDRA BANK LTD. - AZ-2599
+802,Account,This role looks like a ledger or account head rather than a party master.,KOTAK MAHINDRA BANK LTD. - AX-9603,Loanaccount,KOTAK MAHINDRA BANK LTD. - AX-9603,,,,,VADODARA,,,KOTAK MAHINDRA BANK LTD. - AX-9603
+803,Account,This role looks like a ledger or account head rather than a party master.,KOTAK MAHINDRA BANK LTD. - AX-9162,Loanaccount,KOTAK MAHINDRA BANK LTD. - AX-9162,,,,,VADODARA,,,KOTAK MAHINDRA BANK LTD. - AX-9162
+804,Account,This role looks like a ledger or account head rather than a party master.,KOTAK MAHINDRA BANK LTD. - AX-9018,Loanaccount,KOTAK MAHINDRA BANK LTD. - AX-9018,,,,,VADODARA,,,KOTAK MAHINDRA BANK LTD. - AX-9018
+805,Account,This role looks like a ledger or account head rather than a party master.,KOTAK MAHINDRA BANK - MSME LOAN,Loanaccount,KOTAK MAHINDRA BANK - MSME LOAN,,,,,VADODARA,,,KOTAK MAHINDRA BANK - MSME LOAN
+806,Account,This role looks like a ledger or account head rather than a party master.,HDFC BANK LTD. - LK 7599,Loanaccount,HDFC BANK LTD. - LK 7599,,,,,VADODARA,,,HDFC BANK LTD. - LK 7599
+807,Account,This role looks like a ledger or account head rather than a party master.,AXIS BANK - NEW CHASSIS,Loanaccount,AXIS BANK - NEW CHASSIS,,,,,VADODARA,,,AXIS BANK - NEW CHASSIS
+815,Manual Review,"Role mixes party and ledger-style records, so it was not auto-imported.",MITESH C. PATEL - CAPITAL,Buyer,MITESH C. PATEL - CAPITAL,,,,,VADODARA,,,CAPITAL - MITESH PATEL
+816,Account,This role looks like a ledger or account head rather than a party master.,SECURITY EXPENSE,Expense,SECURITY EXPENSE,,,,,,,,SECURITY EXPENSE
+818,Account,This role looks like a ledger or account head rather than a party master.,RATE DIFFERENCE - IGST,Income Head,RATE DIFFERENCE - IGST,,,,,,,,RATE DIFFERENCE - IGST
+820,Account,This role looks like a ledger or account head rather than a party master.,COURRIER EXP A/C.,Expense,COURRIER EXP A/C.,,,,,VADODARA,,,COURRIER EXP A/C.
+825,Vehicle,Source row does not include the required ERPNext Vehicle fields.,Eicher Motors Ltd.,Vehicle Manufacturer,Eicher Motors Ltd.,,,,,,,,Eicher Motors Ltd.
+832,Account,This role looks like a ledger or account head rather than a party master.,TATA MOTOR FINANCE LTD - BT - 5299,Loanaccount,TATA MOTOR FINANCE LTD - BT - 5299,,,,,GUJARAT,,,TATA MOTOR FINANCE LTD - BT - 5299
+833,Account,This role looks like a ledger or account head rather than a party master.,HDFC BANK LTD. - BT-6597,Loanaccount,HDFC BANK LTD. - BT-6597,,,,,GUJARAT,,,HDFC BANK LTD. - BT-6597
+834,Account,This role looks like a ledger or account head rather than a party master.,TATA MOTORS FINANCE SOLUTIONS LTD - 0125,Loanaccount,TATA MOTORS FINANCE SOLUTIONS LTD - 0125,,,,,GUJARAT,,,TATA MOTORS FINANCE SOLUTIONS LTD - 0125
+835,Account,This role looks like a ledger or account head rather than a party master.,TATA MOTORS FINANCE SOLUTIONS LTD - 0030,Loanaccount,TATA MOTORS FINANCE SOLUTIONS LTD - 0030,,,,,GUJARAT,,,TATA MOTORS FINANCE SOLUTIONS LTD - 0030
+836,Account,This role looks like a ledger or account head rather than a party master.,TATA MOTORS FINANCE SOLUTIONS LTD - 0271,Loanaccount,TATA MOTORS FINANCE SOLUTIONS LTD - 0271,,,,,GUJARAT,,,TATA MOTORS FINANCE SOLUTIONS LTD - 0271
+837,Account,This role looks like a ledger or account head rather than a party master.,TATA MOTORS FINANCE SOLUTIONS LIMITED - AU 7299,Loanaccount,TATA MOTORS FINANCE SOLUTIONS LIMITED - AU 7299,,,,,GUJARAT,,,TATA MOTORS FINANCE SOLUTIONS LIMITED - AU 7299
+838,Account,This role looks like a ledger or account head rather than a party master.,TATA MOTORS FINANCE SOLUTIONS - MSME LOAN,Loanaccount,TATA MOTORS FINANCE SOLUTIONS - MSME LOAN,,,,,GUJARAT,,,TATA MOTORS FINANCE SOLUTIONS - MSME LOAN
+839,Account,This role looks like a ledger or account head rather than a party master.,AXIS BANK LTD. - BT - 3099,Loanaccount,AXIS BANK LTD. - BT - 3099,,,,,VADODARA,,,AXIS BANK LTD. - BT - 3099
+840,Account,This role looks like a ledger or account head rather than a party master.,SUNDARAM FINANCE LIMITED - MSME LOAN,Loanaccount,SUNDARAM FINANCE LIMITED - MSME LOAN,,,,,VADODARA,,,SUNDARAM FINANCE LIMITED - MSME LOAN
+841,Account,This role looks like a ledger or account head rather than a party master.,HDB FINANCIAL SERVICES LTD. - 6259,Loanaccount,HDB FINANCIAL SERVICES LTD. - 6259,"RADHIKA, 2ND FLOOR,","LAW GARDEN ROAD, NAVRANGPURA,",AHMEDABAD - 380009,LOAN ACCOUNT NO. : 4906593,GUJARAT,,,HDB FINANCIAL SERVICES LTD. - 6259
+842,Account,This role looks like a ledger or account head rather than a party master.,MAHINDRA & MAHINDRA FINANCE LTD. - GA 1193,Loanaccount,MAHINDRA & MAHINDRA FINANCE LTD. - GA 1193,,,,,GUJARAT,,,MAHINDRA & MAHINDRA FINANCE LTD. - GA 1193
+843,Account,This role looks like a ledger or account head rather than a party master.,Mahindra & Mahindra Finance Ltd. - AV-2199,Loanaccount,Mahindra & Mahindra Finance Ltd. - AV-2199,,,,,GUJARAT,,,Mahindra & Mahindra Finance Ltd. - AV-2199
+844,Account,This role looks like a ledger or account head rather than a party master.,Mahindra & Mahindra Finance Ltd. - 7611,Loanaccount,Mahindra & Mahindra Finance Ltd. - 7611,,,,,GUJARAT,,,Mahindra & Mahindra Finance Ltd. - 7611
+845,Account,This role looks like a ledger or account head rather than a party master.,Mahindra & Mahindra Finance Ltd - AV-1899,Loanaccount,Mahindra & Mahindra Finance Ltd - AV-1899,,,,,GUJARAT,,,Mahindra & Mahindra Finance Ltd - AV-1899
+846,Account,This role looks like a ledger or account head rather than a party master.,HDFC BANK ECLGS LOAN (MSME),Loanaccount,HDFC BANK ECLGS LOAN (MSME),,,,,GUJARAT,,,HDFC BANK ECLGS LOAN (MSME)
+847,Account,This role looks like a ledger or account head rather than a party master.,KOTAK MAHINDRA BANK LTD. - BT-6599,Loanaccount,KOTAK MAHINDRA BANK LTD. - BT-6599,,,,,GUJARAT,,,KOTAK MAHINDRA BANK LTD. - BT-6599
+869,Account,This role looks like a ledger or account head rather than a party master.,HDFC BANK LTD. CAR LOAN - GJ-06-KH-7599,Loanaccount,HDFC BANK LTD. CAR LOAN - GJ-06-KH-7599,,,,,,,,HDFC BANK LTD. CAR LOAN - GJ-06-KH-7599
+870,Manual Review,"Role mixes party and ledger-style records, so it was not auto-imported.",M G V C L,Vendor,M G V C L,,,,,,,,M G V C L
+871,Account,This role looks like a ledger or account head rather than a party master.,TRANSPORT CHARGES PAID,Account Group,TRANSPORT CHARGES PAID,,,,,,,,TRANSPORT CHARGES PAID
+874,Account,This role looks like a ledger or account head rather than a party master.,DHFL,Loanaccount,DHFL,,,,,GUJARAT,,,DHFL
+875,Account,This role looks like a ledger or account head rather than a party master.,HDB FINANCIAL SERVICES LTD. - 6099,Loanaccount,HDB FINANCIAL SERVICES LTD. - 6099,,,,,GUJARAT,,,HDB FINANCIAL SERVICES LTD. - 6099
+876,Account,This role looks like a ledger or account head rather than a party master.,MAHINDRA & MAHINDRA FINANCE LTD. - 1334,Loanaccount,MAHINDRA & MAHINDRA FINANCE LTD. - 1334,,,,,GUJARAT,,,MAHINDRA & MAHINDRA FINANCE LTD. - 1334
+877,Account,This role looks like a ledger or account head rather than a party master.,SUNDARAM FINANCE LTD. - RJ-51-GA-7000,Loanaccount,SUNDARAM FINANCE LTD. - RJ-51-GA-7000,,,,,GUJARAT,,,SUNDARAM FINANCE LTD. - RJ-51-GA-7000
+880,Account,This role looks like a ledger or account head rather than a party master.,GPS SERVICE,Expense,GPS SERVICE,,,,,,,,GPS SERVICE
+888,Account,This role looks like a ledger or account head rather than a party master.,HDFC BANK LTD. - AZ -9699,Loanaccount,HDFC BANK LTD. - AZ -9699,,,,,GUJARAT,,,HDFC BANK LTD. - AZ -9699
+890,Account,This role looks like a ledger or account head rather than a party master.,HDFC BANK LTD. - BT - 1999,Loanaccount,HDFC BANK LTD. - BT - 1999,,,,,GUJARAT,,,HDFC BANK LTD. - BT - 1999
+891,Account,This role looks like a ledger or account head rather than a party master.,YES BANK LTD. - BT-5999,Loanaccount,YES BANK LTD. - BT-5999,,,,,GUJARAT,,,YES BANK LTD. - BT-5999
+892,Account,This role looks like a ledger or account head rather than a party master.,YES BANK MSME LOAN,Loanaccount,YES BANK MSME LOAN,,,,,VADODARA,,,YES BANK MSME LOAN
+893,Account,This role looks like a ledger or account head rather than a party master.,MAHINDRA FINANCE - AZ 7999,Loanaccount,MAHINDRA FINANCE - AZ 7999,,,,,VADODARA,,,MAHINDRA FINANCE - AZ 7999
+894,Account,This role looks like a ledger or account head rather than a party master.,MAHINDRA & MAHINDRA FINANCE - GB - 7878,Loanaccount,MAHINDRA & MAHINDRA FINANCE - GB - 7878,,,,,VADODARA,,,MAHINDRA & MAHINDRA FINANCE - GB - 7878
+895,Account,This role looks like a ledger or account head rather than a party master.,HDB Financial Services Ltd. - BV-5782,Loanaccount,HDB Financial Services Ltd. - BV-5782,,,,,VADODARA,,,HDB Financial Services Ltd. - BV-5782
+896,Account,This role looks like a ledger or account head rather than a party master.,HDB Financial Services Ltd. - BV-5804,Loanaccount,HDB Financial Services Ltd. - BV-5804,,,,,VADODARA,,,HDB Financial Services Ltd. - BV-5804
+900,Account,This role looks like a ledger or account head rather than a party master.,TANKER PARTS 18%,Expense,TANKER PARTS 18%,,,,,,,,TANKER PARTS 18%
+901,Account,This role looks like a ledger or account head rather than a party master.,TANKER TYRE (18%),Expense,TANKER TYRE (18%),,,,,,,,TANKER TYRE (18%)
+903,Manual Review,"Role mixes party and ledger-style records, so it was not auto-imported.",BSNL - 265248259,Vendor,BSNL - 265248259,,,,,GUJARAT,,,BSNL - 265248259
+905,Account,This role looks like a ledger or account head rather than a party master.,TATA MOTOR FINANCE SOLUTIONS LIMITED - AV 7227,Loanaccount,TATA MOTOR FINANCE SOLUTIONS LIMITED - AV 7227,,,,,VADODARA,,,TATA MOTOR FINANCE SOLUTIONS LIMITED - AV 7227
+906,Account,This role looks like a ledger or account head rather than a party master.,TATA MOTOR FINANCE SOLUTIONS LIMITED - 6391 (3418),Loanaccount,TATA MOTOR FINANCE SOLUTIONS LIMITED - 6391 (3418),,,,,VADODARA,,,TATA MOTOR FINANCE SOLUTIONS LIMITED - 6391 (3418)
+907,Account,This role looks like a ledger or account head rather than a party master.,TATA MOTOR FINANCE SOLUTIONS LIMITED - 6264 (3415 ),Loanaccount,TATA MOTOR FINANCE SOLUTIONS LIMITED - 6264 (3415,,,,,VADODARA,,,TATA MOTOR FINANCE SOLUTIONS LIMITED - 6264 (3415 )
+908,Account,This role looks like a ledger or account head rather than a party master.,TATA MOTOR FINANCE SOLUTIONS LIMITED - 6382 (3417),Loanaccount,TATA MOTOR FINANCE SOLUTIONS LIMITED - 6382 (3417),,,,,VADODARA,,,TATA MOTOR FINANCE SOLUTIONS LIMITED - 6382 (3417)
+922,Manual Review,"Role mixes party and ledger-style records, so it was not auto-imported.",VODAFONE NO. 9825041644,Company,VODAFONE NO. 9825041644,,,,,,,,VODAFONE NO. 9825041644
+926,Account,This role looks like a ledger or account head rather than a party master.,ELECTRICITY EXP,Expense,ELECTRICITY EXP,,,,,,,,ELECTRICITY EXP
+927,Account,This role looks like a ledger or account head rather than a party master.,TDS - 94IB,TDS Payable,TDS - 94IB,,,,,,,,TDS - 94IB
+929,Account,This role looks like a ledger or account head rather than a party master.,HDFC BANK LTD. - GJ-01-DX-7599,Loanaccount,HDFC BANK LTD. - GJ-01-DX-7599,,,,,,,,HDFC BANK LTD. - GJ-01-DX-7599
+936,Account,This role looks like a ledger or account head rather than a party master.,HDFC BANK LTD. CAR LOAN : GJ-06-PF-9199,Loanaccount,HDFC BANK LTD. CAR LOAN : GJ-06-PF-9199,,,,,AHMEDABAD.,,,HDFC BANK LTD. CAR LOAN : GJ-06-PF-9199
+937,Account,This role looks like a ledger or account head rather than a party master.,TANKER TYRE,Expense,TANKER TYRE,,,,,,,,TANKER TYRE
+958,Account,This role looks like a ledger or account head rather than a party master.,TANKER MIS. EXP(IGST),Expense,TANKER MIS. EXP(IGST),,,,,RAJASTHAN,,,TANKER MIS. EXP(IGST)
+978,Account,This role looks like a ledger or account head rather than a party master.,AXIS BANK - AV-5463,Loanaccount,AXIS BANK - AV-5463,,,,,VADODARA,,,AXIS BANK - AV-5463
+980,Account,This role looks like a ledger or account head rather than a party master.,TANKER TYRE EXP,Expense,TANKER TYRE EXP,,,,,,,,TANKER TYRE EXP
+997,Account,This role looks like a ledger or account head rather than a party master.,MUSTAK ALI,Sales Account,MUSTAK ALI,,,,,,,,MUSTAK ALI
+1009,Manual Review,"Role mixes party and ledger-style records, so it was not auto-imported.",TENDER DEPOSIT,Vendor,TENDER DEPOSIT,,,,,,,,TENDER DEPOSIT
+1012,Account,This role looks like a ledger or account head rather than a party master.,MAHINDRA AND MAHINDRA FINANCIAL- NEW CHASSIS,Loanaccount,MAHINDRA AND MAHINDRA FINANCIAL- NEW CHASSIS,,,,,,,,MAHINDRA AND MAHINDRA FINANCIAL- NEW CHASSIS
+1013,Account,This role looks like a ledger or account head rather than a party master.,SALES PROMOTION EXP.,Sales Account,SALES PROMOTION EXP.,,,,,VADODARA,,,SALES PROMOTION EXP.
+1016,Account,This role looks like a ledger or account head rather than a party master.,TDS - 94I,TDS Payable,TDS - 94I,,,,,,,,TDS - 94I
+1022,Account,This role looks like a ledger or account head rather than a party master.,ASHOK PATEL,Loanaccount,ASHOK PATEL,,,,,,,,ASHOK PATEL
+1027,Account,This role looks like a ledger or account head rather than a party master.,VEHICLE CLAIM RECEIVABLE,Loanaccount,VEHICLE CLAIM RECEIVABLE,,,,,,,,VEHICLE CLAIM RECEIVABLE
+1051,Account,This role looks like a ledger or account head rather than a party master.,COMPUTER PARTS PURCHASE,Expense,COMPUTER PARTS PURCHASE,,,,,,,,COMPUTER PARTS PURCHASE
+1060,Manual Review,"Role mixes party and ledger-style records, so it was not auto-imported.",SUSPENS A/C,Vendor,SUSPENS A/C,,,,,,,,SUSPENS A/C
+1064,Manual Review,"Role mixes party and ledger-style records, so it was not auto-imported.",GUJARAT STATE ELECTRICITY CORPORATION LTD,Vendor,GUJARAT STATE ELECTRICITY CORPORATION LTD,"VIDHYUT BHAVAN,",VADODARA,,,,24AAACG6864F1ZO,,GUJARAT STATE ELECTRICITY CORPORATION LTD
+1071,Account,This role looks like a ledger or account head rather than a party master.,KOTAK MAHINDRA BANK - AV - 5781,Loanaccount,KOTAK MAHINDRA BANK - AV - 5781,,,,,,,,KOTAK MAHINDRA BANK - AV - 5781
+1072,Account,This role looks like a ledger or account head rather than a party master.,KOTAK MAHINDRA BANK - AV - 5778,Loanaccount,KOTAK MAHINDRA BANK - AV - 5778,,,,,,,,KOTAK MAHINDRA BANK - AV - 5778
+1077,Account,This role looks like a ledger or account head rather than a party master.,SUNDARAM FINANCE LTD - TYRE FINANCE,Loanaccount,SUNDARAM FINANCE LTD - TYRE FINANCE,,,,,,,,SUNDARAM FINANCE LTD - TYRE FINANCE
+1097,Manual Review,No safe default ERPNext master mapping was inferred.,CAR INSURANCE EXP.,Insurance Co,CAR INSURANCE EXP.,,,,,,,,CAR INSURANCE EXP.
+1115,Manual Review,"Role mixes party and ledger-style records, so it was not auto-imported.",Debit Note,BRANCH,Debit Note,,,,,,,,Debit Note
+1116,Manual Review,"Role mixes party and ledger-style records, so it was not auto-imported.",MATERIAL SHORTAGE NON GST,BRANCH,MATERIAL SHORTAGE NON GST,,,,,,,,MATERIAL SHORTAGE NON GST
+1117,Account,This role looks like a ledger or account head rather than a party master.,Diff R/off,Income Head,Diff R/off,,,,,,,,Diff R/off
+1125,Account,This role looks like a ledger or account head rather than a party master.,FORBES SELECT WD X2 18%,Expense,FORBES SELECT WD X2 18%,,,,,,,,FORBES SELECT WD X2
+1127,Account,This role looks like a ledger or account head rather than a party master.,"NINETY ONE MARIKE 27.5"" ORANGE",Expense,"NINETY ONE MARIKE 27.5"" ORANGE",,,,,,,,"NINETY ONE MARIKE 27.5"" ORANGE"
+1129,Account,This role looks like a ledger or account head rather than a party master.,INTERNET SECURITY (IGST 18%),Expense,INTERNET SECURITY (IGST 18%),,,,,,,,INTERNET SECURITY (IGST)
+1141,Account,This role looks like a ledger or account head rather than a party master.,AXIS BANK LTD. - HH - 6022,Loanaccount,AXIS BANK LTD. - HH - 6022,,,,,VADODARA,,,AXIS BANK LTD. - HH - 6022
+1142,Account,This role looks like a ledger or account head rather than a party master.,AXIS BANK LTD. - AV - 8172,Loanaccount,AXIS BANK LTD. - AV - 8172,,,,,VADODARA,,,AXIS BANK LTD. - AV - 8172
+1151,Account,This role looks like a ledger or account head rather than a party master.,Printing & Stationery Exp(U/R),Expense,Printing & Stationery Exp(U/R),,,,,,,,Printing & Stationery Exp(U/R)
+1153,Manual Review,"Role mixes party and ledger-style records, so it was not auto-imported.",INSURANCE OFFICE,Vendor,INSURANCE OFFICE,,,,,,,,INSURANCE OFFICE
+1155,Account,This role looks like a ledger or account head rather than a party master.,AXIS BANK LTD. - HH- 6222,Loanaccount,AXIS BANK LTD. - HH- 6222,,,,,VADODARA,,,AXIS BANK LTD. - HH- 6222
+1156,Account,This role looks like a ledger or account head rather than a party master.,AXIS BANK LTD. - HH - 4222,Loanaccount,AXIS BANK LTD. - HH - 4222,,,,,VADODARA,,,AXIS BANK LTD. - HH - 4222
+1157,Account,This role looks like a ledger or account head rather than a party master.,AXIS BANK LTD - MSME LOAN,Loanaccount,AXIS BANK LTD - MSME LOAN,,,,,VADODARA,,,AXIS BANK LTD - MSME LOAN
+1158,Account,This role looks like a ledger or account head rather than a party master.,Mahindra & Mahindra Financial Services Ltd.,Loanaccount,Mahindra & Mahindra Financial Services Ltd.,,,,,VADODARA,,,Mahindra & Mahindra Financial Services Ltd.
+1162,Account,This role looks like a ledger or account head rather than a party master.,PARKING CHARGES,Expense,PARKING CHARGES,,,,,,,,PARKING CHARGES
+1170,Account,This role looks like a ledger or account head rather than a party master.,LOADING & UNLOADING EXP.,Expense,LOADING & UNLOADING EXP.,,,,,,,,LOADING & UNLOADING EXP.
+1171,Account,This role looks like a ledger or account head rather than a party master.,WEIGH BRIDGE EXPENSES,Expense,WEIGH BRIDGE EXPENSES,,,,,,,,WEIGH BRIDGE EXPENSES
+1174,Account,This role looks like a ledger or account head rather than a party master.,Sales Taxable,Income Head,Sales Taxable,,,,,VADODARA,,,Sales Taxable
+1175,Account,This role looks like a ledger or account head rather than a party master.,Interstate Sale Taxable,Income Head,Interstate Sale Taxable,,,,,VADODARA,,,Interstate Sale Taxable
+1189,Account,This role looks like a ledger or account head rather than a party master.,ANNUAL MAINTAINANCE CHARGES IGST,Expense,ANNUAL MAINTAINANCE CHARGES IGST,,,,,,,,ANNUAL MAINTAINANCE CHARGES IGST
+1194,Account,This role looks like a ledger or account head rather than a party master.,PROFESSIONAL CHARGES A/C.,Expense,PROFESSIONAL CHARGES A/C.,,,,,,,,PROFESSIONAL CHARGES A/C.
+1196,Account,This role looks like a ledger or account head rather than a party master.,TRANSPORT SALES EXEMPTED,Income Head,TRANSPORT SALES EXEMPTED,,,,,,,,TRANSPORT SALES EXEMPTED
+1206,Account,This role looks like a ledger or account head rather than a party master.,TANKER TYRE (IGST) 28%,Expense,TANKER TYRE (IGST) 28%,,,,,,,,TANKER TYRE (IGST) 28%
+1212,Account,This role looks like a ledger or account head rather than a party master.,YES BANK - GJ-16-AV-7263,Loanaccount,YES BANK - GJ-16-AV-7263,,,,,GUJARAT,,,YES BANK - GJ-16-AV-7263
+1215,Account,This role looks like a ledger or account head rather than a party master.,MOBILE PHONE PURCHASE 18%,Expense,MOBILE PHONE PURCHASE 18%,,,,,,,,MOBILE PHONE PURCHASE 18%
+1216,Account,This role looks like a ledger or account head rather than a party master.,SGST 6%,Income Head,,,,,,,,,SGST @ 6%
+1222,Account,This role looks like a ledger or account head rather than a party master.,BIO DIESEL - CGST / SGST 18%,Expense,BIO DIESEL - CGST / SGST 18%,,,,,,,,BIO DIESEL - CGST / SGST 18%
+1226,Account,This role looks like a ledger or account head rather than a party master.,KOTAK MAHINDRA BANK - AV - 8136,Loanaccount,KOTAK MAHINDRA BANK - AV - 8136,,,,,,,,KOTAK MAHINDRA BANK - AV - 8136
+1227,Account,This role looks like a ledger or account head rather than a party master.,MAHINDRA & MAHINDRA FINANCE - GC - 3015,Loanaccount,MAHINDRA & MAHINDRA FINANCE - GC - 3015,,,,,,,,MAHINDRA & MAHINDRA FINANCE - GC - 3015
+1230,Account,This role looks like a ledger or account head rather than a party master.,DEDUCTION,Income Head,DEDUCTION,,,,,,,,DEDUCTION
+1258,Account,This role looks like a ledger or account head rather than a party master.,SOFTWARE PURCHASE,Expense,SOFTWARE PURCHASE,,,,,VADODARA,,,SOFTWARE PURCHASE
+1295,Manual Review,"Role mixes party and ledger-style records, so it was not auto-imported.",RIKESH C PATEL,Buyer,RIKESH C PATEL,,,,,,,,RIKESH C PATEL
+1327,Manual Review,"Role mixes party and ledger-style records, so it was not auto-imported.",SHIVAM ROADLINES,BRANCH,SHIVAM ROADLINES,,,,,,,,SHIVAM ROADLINES
+1330,Account,This role looks like a ledger or account head rather than a party master.,SHREE SHIV AGRO - BARODA[EXPENSE],Expense,SHREE SHIV AGRO - BARODA,,,,,,,,SHREE SHIV AGRO - BARODA
+1354,Account,This role looks like a ledger or account head rather than a party master.,TDS - 94Q,TDS Payable,TDS - 94Q,,,,,,,,TDS - 94Q
+1356,Account,This role looks like a ledger or account head rather than a party master.,TDS - 94H,TDS Payable,TDS - 94H,,,,,,,,TDS - 94H
+1384,Employee,This looks like employee data and should be reviewed before import.,NISHKA DHAVALBHAI SHAH,Employ,NISHKA DHAVALBHAI SHAH,,,,,GUJARAT,,,NISHKA DHAVALBHAI SHAH
+1385,Account,This role looks like a ledger or account head rather than a party master.,HARDIK KALKAR & ASSOCIATES,Expense,HARDIK KALKAR & ASSOCIATES,"18, SNEHDHARA SOC, RAJNAGAR ROAD,","SUBHANPURA, VADODARA",,,GUJARAT,,,HARDIK KALKAR & ASSOCIATES
+1399,Account,This role looks like a ledger or account head rather than a party master.,CAR PARTS EXPENSES 18%,Expense,CAR PARTS EXPENSES 18%,,,,,GUJARAT,,,CAR PARTS EXPENSES
+1418,Account,This role looks like a ledger or account head rather than a party master.,DOCUMENTS CHARGES,Expense,DOCUMENTS CHARGES,,,,,,,,DOCUMENTS CHARGES
+1419,Manual Review,"Role mixes party and ledger-style records, so it was not auto-imported.",ICICI BANK LTD000010.,BRANCH,ICICI BANK LTD000010.,,,,,,,,ICICI BANK LIMITED - CC ACCOUNT
+1431,Account,This role looks like a ledger or account head rather than a party master.,RHVO-(INDIZEL) 18%,Expense,RHVO-(INDIZEL) 18%,,,,,,,,RHVO-(INDIZEL) 18%
+1432,Account,This role looks like a ledger or account head rather than a party master.,RHVO - (INDIZEL) 18%,Trip Expense Ledger,RHVO - (INDIZEL) 18%,,,,,,,,RHVO - (INDIZEL) 18%
+1460,Account,This role looks like a ledger or account head rather than a party master.,HDFC BANK - NEW CHASSIS,Loanaccount,HDFC BANK - NEW CHASSIS,,,,,GUJARAT,,,HDFC BANK - NEW CHASSIS
+1462,Account,This role looks like a ledger or account head rather than a party master.,TRAVELLING EXP.,Expense,TRAVELLING EXP.,,,,,,,,TRAVELLING EXP.
+1468,Account,This role looks like a ledger or account head rather than a party master.,RENTAL OF VEHICLE TRACKING DEVICE,Expense,RENTAL OF VEHICLE TRACKING DEVICE,,,,,,,,RENTAL OF VEHICLE TRACKING DEVICE
+1472,Account,This role looks like a ledger or account head rather than a party master.,MAHINDRA & MAHINDRA FINANCE LTD. - 1975,Loanaccount,MAHINDRA & MAHINDRA FINANCE LTD. - 1975,,,,,GUJARAT,,,MAHINDRA & MAHINDRA FINANCE LTD. - 1975
+1523,Account,This role looks like a ledger or account head rather than a party master.,MAHINDRA & MAHINDRA FINANCE - GA - 5783,Loanaccount,MAHINDRA & MAHINDRA FINANCE - GA - 5783,,,,,GUJARAT,,,MAHINDRA & MAHINDRA FINANCE - GA - 5783
+1524,Account,This role looks like a ledger or account head rather than a party master.,MAHINDRA & MAHINDRA FINANCE - BW - 1542,Loanaccount,MAHINDRA & MAHINDRA FINANCE - BW - 1542,,,,,GUJARAT,,,MAHINDRA & MAHINDRA FINANCE - BW - 1542
+1525,Account,This role looks like a ledger or account head rather than a party master.,MAHINDRA & MAHINDRA FINANCE - BW - 1952,Loanaccount,MAHINDRA & MAHINDRA FINANCE - BW - 1952,,,,,GUJARAT,,,MAHINDRA & MAHINDRA FINANCE - BW - 1952
+1526,Account,This role looks like a ledger or account head rather than a party master.,MAHINDRA & MAHINDRA FINANCE - BW - 2610,Loanaccount,MAHINDRA & MAHINDRA FINANCE - BW - 2610,,,,,GUJARAT,,,MAHINDRA & MAHINDRA FINANCE - BW - 2610
+1527,Account,This role looks like a ledger or account head rather than a party master.,OFFICE INSURANCE EXP -NON GST,Expense,OFFICE INSURANCE EXP -NON GST,,,,,,,,OFFICE INSURANCE EXP -NON GST
+1532,Account,This role looks like a ledger or account head rather than a party master.,HDFC BANK LTD. - AW -2899,Loanaccount,HDFC BANK LTD. - AW -2899,,,,,GUJARAT,,,HDFC BANK LTD. - AW -2899
+1537,Account,This role looks like a ledger or account head rather than a party master.,OFFICE MIS. EXP.,Expense,OFFICE MIS. EXP.,,,,,,,,OFFICE MIS. EXP.
+1543,Account,This role looks like a ledger or account head rather than a party master.,HDFC BANK LTD. - AW -2499,Loanaccount,HDFC BANK LTD. - AW -2499,,,,,GUJARAT,,,HDFC BANK LTD. - AW -2499
+1544,Account,This role looks like a ledger or account head rather than a party master.,KOTAK MAHINDRA BANK LTD. - AW-2799,Loanaccount,KOTAK MAHINDRA BANK LTD. - AW-2799,,,,,GUJARAT,,,KOTAK MAHINDRA BANK LTD. - AW-2799
+1545,Account,This role looks like a ledger or account head rather than a party master.,EMD,Loanaccount,EMD,,,,,GUJARAT,,,EMD
+1559,Account,This role looks like a ledger or account head rather than a party master.,KOTAK MAHINDRA BANK LTD. - AW-3999,Loanaccount,KOTAK MAHINDRA BANK LTD. - AW-3999,,,,,GUJARAT,,,KOTAK MAHINDRA BANK LTD. - AW-3999
+1563,Account,This role looks like a ledger or account head rather than a party master.,MAHINDRA & MAHINDRA FINANCE - BW - 1948,Loanaccount,MAHINDRA & MAHINDRA FINANCE - BW - 1948,,,,,GUJARAT,,,MAHINDRA & MAHINDRA FINANCE - BW - 1948
+1564,Account,This role looks like a ledger or account head rather than a party master.,MAHINDRA & MAHINDRA FINANCE - RJ - 9680,Loanaccount,MAHINDRA & MAHINDRA FINANCE - RJ - 9680,,,,,GUJARAT,,,MAHINDRA & MAHINDRA FINANCE - RJ - 9680
+1569,Account,This role looks like a ledger or account head rather than a party master.,VALUATION CHARGES,Expense,VALUATION CHARGES,,,,,,,,VALUATION CHARGES
+1570,Account,This role looks like a ledger or account head rather than a party master.,LEGAL CHARGES,Expense,LEGAL CHARGES,,,,,,,,LEGAL CHARGES
+1571,Account,This role looks like a ledger or account head rather than a party master.,CERSAI CHARGES,Expense,CERSAI CHARGES,,,,,,,,CERSAI CHARGES
+1572,Account,This role looks like a ledger or account head rather than a party master.,PROCESSING FEES,Expense,PROCESSING FEES,,,,,,,,PROCESSING FEES
+1580,Account,This role looks like a ledger or account head rather than a party master.,KOTAK MAHINDRA BANK LTD. - AW-9199,Loanaccount,KOTAK MAHINDRA BANK LTD. - AW-9199,,,,,GUJARAT,,,KOTAK MAHINDRA BANK LTD. - AW-9199
+1581,Account,This role looks like a ledger or account head rather than a party master.,HDFC BANK LTD. - AW -1232,Loanaccount,HDFC BANK LTD. - AW -1232,,,,,GUJARAT,,,HDFC BANK LTD. - AW -1232
+1582,Account,This role looks like a ledger or account head rather than a party master.,KOTAK MAHINDRA BANK LTD. - AW-3899,Loanaccount,KOTAK MAHINDRA BANK LTD. - AW-3899,,,,,GUJARAT,,,KOTAK MAHINDRA BANK LTD. - AW-3899
+1599,Account,This role looks like a ledger or account head rather than a party master.,GST Payable,GST Ledger,GST Payable,,,,,,,,GST Payable
+1613,Account,This role looks like a ledger or account head rather than a party master.,ENTERTAINMENT EXP,Expense,ENTERTAINMENT EXP,,,,,,,,ENTERTAINMENT EXP
+1617,Account,This role looks like a ledger or account head rather than a party master.,SHIV SANDIPBHAI PATEL (LOAN),Loanaccount,SHIV SANDIPBHAI PATEL (LOAN),,,,,,,,SHIV SANDIPBHAI PATEL (LOAN)
+1645,Account,This role looks like a ledger or account head rather than a party master.,HDFC BANK LTD. - AW-3299,Loanaccount,HDFC BANK LTD. - AW-3299,,,,,GUJARAT,,,HDFC BANK LTD. - AW-3299
+1646,Account,This role looks like a ledger or account head rather than a party master.,HDFC BANK LTD. - AW-3499,Loanaccount,HDFC BANK LTD. - AW-3499,,,,,GUJARAT,,,HDFC BANK LTD. - AW-3499
+1647,Account,This role looks like a ledger or account head rather than a party master.,AXIS BANK LTD. - AW-3790,Loanaccount,AXIS BANK LTD. - AW-3790,,,,,GUJARAT,,,AXIS BANK LTD. - AW-3790
+1648,Account,This role looks like a ledger or account head rather than a party master.,TDS - 94J,TDS Payable,TDS - 94J,,,,,GUJARAT,,,TDS - 94J
+1715,Account,This role looks like a ledger or account head rather than a party master.,Taxable,Income Head,Taxable,,,,,VADODARA,,,Taxable
+1781,Account,This role looks like a ledger or account head rather than a party master.,AXIS BANK LTD. - GC -1959,Loanaccount,AXIS BANK LTD. - GC -1959,,,,,GUJARAT,,,AXIS BANK LTD. - GC -1959
+1791,Account,This role looks like a ledger or account head rather than a party master.,TALLY ON CLOUD,Expense,TALLY ON CLOUD,,,,,VADODARA,,,TALLY ON CLOUD
+1803,Account,This role looks like a ledger or account head rather than a party master.,SOFTWERE CHARGES (IGST) 18%,Expense,SOFTWERE CHARGES (IGST) 18%,,,,,,,,SOFTWERE CHARGES (IGST) 18%
+1927,Account,This role looks like a ledger or account head rather than a party master.,Interest on MSME Loan,Loanaccount,Interest on MSME Loan,,,,,,,,Interest on MSME Loan
+1928,Account,This role looks like a ledger or account head rather than a party master.,TAX AUDIT FEES,Expense,TAX AUDIT FEES,,,,,,,,TAX AUDIT FEES
+1995,Account,This role looks like a ledger or account head rather than a party master.,HDFC BANK LTD. - AW-6472,Loanaccount,HDFC BANK LTD. - AW-6472,,,,,GUJARAT,,,HDFC BANK LTD. - AW-6472
+1996,Account,This role looks like a ledger or account head rather than a party master.,HDFC BANK LTD. - AW-8499,Loanaccount,HDFC BANK LTD. - AW-8499,,,,,GUJARAT,,,HDFC BANK LTD. - AW-8499
+2002,Vehicle,Source row does not include the required ERPNext Vehicle fields.,TANKER NO. AV-8415,Tanker,TANKER NO. AV-8415,,,,,,,,TANKER NO. AV-8415
+2003,Account,This role looks like a ledger or account head rather than a party master.,IDFC FIRST BANK,Loanaccount,IDFC FIRST BANK,,,,,GUJARAT,,,IDFC FIRST BANK
+2010,Account,This role looks like a ledger or account head rather than a party master.,CITIBANK NA,Loanaccount,CITIBANK NA,,,,,GUJARAT,,,CITIBANK NA
+2011,Account,This role looks like a ledger or account head rather than a party master.,AXIS BANK LTD. - BW-9567,Loanaccount,AXIS BANK LTD. - BW-9567,,,,,GUJARAT,,,HDFC BANK LTD. - BW-9567
+2012,Account,This role looks like a ledger or account head rather than a party master.,Interest on Vehicle Loan,Loanaccount,Interest on Vehicle Loan,,,,,,,,Interest on Vehicle Loan
+2021,Account,This role looks like a ledger or account head rather than a party master.,IGST @ 12%,Income Head,IGST @ 12%,,,,,,,,IGST @ 12%
+2053,Account,This role looks like a ledger or account head rather than a party master.,IDFC BANK LTD. - GJ-06-AZ-6373,Loanaccount,IDFC BANK LTD. - GJ-06-AZ-6373,,,,,GUJARAT,,,IDFC BANK LTD. - GJ-06-AZ-6373
+2073,Account,This role looks like a ledger or account head rather than a party master.,AXIS BANK - BW - 4726,Loanaccount,AXIS BANK - BW - 4726,,,,,GUJARAT,,,AXIS BANK - BW - 4726
+2085,Account,This role looks like a ledger or account head rather than a party master.,HDFC BANK LTD - AW - 6672,Loanaccount,HDFC BANK LTD - AW - 6672,,,,,GUJARAT,,,HDFC BANK LTD - AW - 6672
+2118,Account,This role looks like a ledger or account head rather than a party master.,"CAR REP, EXP",Expense,"CAR REP, EXP",,,,,GUJARAT,,,"CAR REP, EXP"
+2135,Manual Review,No safe default ERPNext master mapping was inferred.,GOODYEAR,Tyre Manufacturer,GOODYEAR,,,,,GUJARAT,,,GOODYEAR
+2147,Account,This role looks like a ledger or account head rather than a party master.,DHFL - TDS,Loanaccount,DHFL - TDS,,,,,GUJARAT,,AAACD1977A,DHFL - TDS
+2166,Account,This role looks like a ledger or account head rather than a party master.,HDFC BANK LTD. - AW-7275,Loanaccount,HDFC BANK LTD. - AW-7275,,,,,GUJARAT,,,HDFC BANK LTD. - AW-7275
+2167,Account,This role looks like a ledger or account head rather than a party master.,HDFC BANK LTD. - AW-6872,Loanaccount,HDFC BANK LTD. - AW-6872,,,,,GUJARAT,,,HDFC BANK LTD. - AW-6872
+2168,Account,This role looks like a ledger or account head rather than a party master.,HDFC BANK LTD. - AW - 6572,Loanaccount,HDFC BANK LTD. - AW - 6572,,,,,GUJARAT,,,HDFC BANK LTD. - AW - 6572
+2174,Account,This role looks like a ledger or account head rather than a party master.,BANK INTEREST,Interestaccount,BANK INTEREST,,,,,GUJARAT,,,BANK INTEREST
+2199,Account,This role looks like a ledger or account head rather than a party master.,GJ-06-NF-6699 - ROYAL ENFIELD,Loanaccount,GJ-06-NF-6699 - ROYAL ENFIELD,,,,,,,,GJ-06-NF-6699 - ROYAL ENFIELD
+2232,Account,This role looks like a ledger or account head rather than a party master.,Insurance Exp -Non Gst,Expense,Insurance Exp -Non Gst,,,,,GUJARAT,,,Insurance Exp -Non Gst
+2237,Account,This role looks like a ledger or account head rather than a party master.,HDFC BANK LTD. - AW -8755,Loanaccount,HDFC BANK LTD. - AW -8755,,,,,GUJARAT,,,HDFC BANK LTD. - AW -8755
+2283,Account,This role looks like a ledger or account head rather than a party master.,AXIS BANK LTD - T-1261,Loanaccount,AXIS BANK LTD - T-1261,,,,,,,,AXIS BANK LTD - T-1261
+2519,Account,This role looks like a ledger or account head rather than a party master.,IGST,Income Head,IGST,,,,,,,,IGST 18%
+2520,Account,This role looks like a ledger or account head rather than a party master.,SGST,Income Head,SGST,,,,,,,,SGST 9%
+2521,Account,This role looks like a ledger or account head rather than a party master.,CGST,Income Head,CGST,,,,,,,,CGST 9%
