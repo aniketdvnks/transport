@@ -1,20 +1,25 @@
 from __future__ import unicode_literals
 
 import frappe
+from frappe.model.rename_doc import rename_doc
 from frappe.permissions import add_permission, update_permission_property
+
+LEGACY_WORKSPACE_NAME = "Transport"
+TRANSPORT_WORKSPACE_NAME = "Transport Management"
+TRANSPORT_WORKSPACE_ROUTE = "/app/transport-management"
 
 ROLE_DEFINITIONS = {
     "Transport Manager": {
         "desk_access": 1,
         "disabled": 0,
-        "home_page": "/app/transport",
+        "home_page": TRANSPORT_WORKSPACE_ROUTE,
         "is_custom": 1,
         "two_factor_auth": 0,
     },
     "Transport Operator": {
         "desk_access": 1,
         "disabled": 0,
-        "home_page": "/app/transport",
+        "home_page": TRANSPORT_WORKSPACE_ROUTE,
         "is_custom": 1,
         "two_factor_auth": 0,
     },
@@ -166,7 +171,7 @@ REPORT_ROLE_RULES = {
 }
 
 WORKSPACE_ROLE_RULES = {
-    "Transport": [
+    TRANSPORT_WORKSPACE_NAME: [
         "System Manager",
         "Fleet Manager",
         "Transport Manager",
@@ -194,6 +199,7 @@ PERMISSION_FIELDS = (
 
 def sync_transport_security():
     ensure_transport_roles()
+    normalize_transport_workspace()
     sync_doctype_permissions()
     sync_report_roles()
     sync_workspace_roles()
@@ -261,6 +267,86 @@ def sync_report_roles():
         if changed:
             report.flags.ignore_links = True
             report.save(ignore_permissions=True)
+
+
+def normalize_transport_workspace():
+    if frappe.db.exists("Workspace", LEGACY_WORKSPACE_NAME) and not frappe.db.exists(
+        "Workspace", TRANSPORT_WORKSPACE_NAME
+    ):
+        workspace = frappe.get_doc("Workspace", LEGACY_WORKSPACE_NAME)
+        workspace.label = TRANSPORT_WORKSPACE_NAME
+        workspace.title = TRANSPORT_WORKSPACE_NAME
+        workspace.module = "Transport Management"
+        workspace.public = 1
+        workspace.is_hidden = 0
+        workspace.flags.ignore_links = True
+        workspace.save(ignore_permissions=True)
+        rename_doc(
+            "Workspace",
+            LEGACY_WORKSPACE_NAME,
+            TRANSPORT_WORKSPACE_NAME,
+            force=True,
+            ignore_permissions=True,
+        )
+
+    if frappe.db.exists("Workspace", TRANSPORT_WORKSPACE_NAME):
+        workspace = frappe.get_doc("Workspace", TRANSPORT_WORKSPACE_NAME)
+        changed = False
+
+        if workspace.label != TRANSPORT_WORKSPACE_NAME:
+            workspace.label = TRANSPORT_WORKSPACE_NAME
+            changed = True
+
+        if workspace.title != TRANSPORT_WORKSPACE_NAME:
+            workspace.title = TRANSPORT_WORKSPACE_NAME
+            changed = True
+
+        if workspace.module != "Transport Management":
+            workspace.module = "Transport Management"
+            changed = True
+
+        if workspace.public != 1:
+            workspace.public = 1
+            changed = True
+
+        if workspace.is_hidden:
+            workspace.is_hidden = 0
+            changed = True
+
+        for row in workspace.links:
+            if row.get("only_for"):
+                row.only_for = ""
+                changed = True
+
+            if row.label == "Transporation Order":
+                row.label = "Transportation Order"
+                changed = True
+
+            if row.label == "Setting":
+                row.label = "Settings"
+                changed = True
+
+            if row.label == "Transport Setting":
+                row.label = "Transport Settings"
+                changed = True
+
+            if row.label == "Cargo Type" and row.link_to == "Cargo Type":
+                row.link_to = "Transport Cargo Type"
+                changed = True
+
+        if changed:
+            workspace.flags.ignore_links = True
+            workspace.save(ignore_permissions=True)
+
+    if frappe.db.exists("Workspace", LEGACY_WORKSPACE_NAME) and frappe.db.exists(
+        "Workspace", TRANSPORT_WORKSPACE_NAME
+    ):
+        legacy_workspace = frappe.get_doc("Workspace", LEGACY_WORKSPACE_NAME)
+        if not legacy_workspace.is_hidden or legacy_workspace.public:
+            legacy_workspace.is_hidden = 1
+            legacy_workspace.public = 0
+            legacy_workspace.flags.ignore_links = True
+            legacy_workspace.save(ignore_permissions=True)
 
 
 def sync_workspace_roles():

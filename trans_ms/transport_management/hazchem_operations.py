@@ -9,18 +9,19 @@ from frappe.core.doctype.data_import.exporter import Exporter
 from frappe.utils import add_years, getdate, today
 from openpyxl import Workbook
 
-WORKSPACE_NAME = "Transport"
+WORKSPACE_NAME = "Transport Management"
+WORKSPACE_ROUTE = "/app/transport-management"
 WORKSPACE_FLOW_BLOCK_NAME = "Transport Hazchem Flow Guide"
 WORKSPACE_TIMELINE_BLOCK_NAME = "Transport Process Timeline"
 WORKSPACE_CONTENT = (
-    '[{"type":"header","data":{"text":"<span class=\\"h4\\">Transport</span>","col":12}},'
+    '[{"type":"header","data":{"text":"<span class=\\"h4\\">Transport Management</span>","col":12}},'
     '{"type":"custom_block","data":{"custom_block_name":"Transport Hazchem Flow Guide","col":12}},'
     '{"type":"custom_block","data":{"custom_block_name":"Transport Process Timeline","col":12}},'
     '{"type":"header","data":{"text":"<span class=\\"h4\\"><b>Report &amp; Masters</b></span>","col":12}},'
     '{"type":"card","data":{"card_name":"Document","col":3}},'
     '{"type":"card","data":{"card_name":"Trip","col":3}},'
     '{"type":"card","data":{"card_name":"Setup","col":3}},'
-    '{"type":"card","data":{"card_name":"Setting","col":3}},'
+    '{"type":"card","data":{"card_name":"Settings","col":3}},'
     '{"type":"card","data":{"card_name":"Reports","col":4}}]'
 )
 DEFAULT_OUTPUT_DIR = (
@@ -587,7 +588,7 @@ def setup_hazchem_operations(report_date=None, output_dir=None):
     }
 
     ensure_workspace_custom_blocks(records, report_date)
-    frappe.reload_doc("transport_management", "workspace", "transport")
+    frappe.reload_doc("transport_management", "workspace", "transport_management")
     ensure_workspace_flow_block(records, report_date)
     exported_files = export_hazchem_import_sheets(records, output_path, report_date)
 
@@ -599,6 +600,25 @@ def setup_hazchem_operations(report_date=None, output_dir=None):
         "counts": {key: len(value) for key, value in records.items()},
         "files": exported_files,
     }
+
+
+@frappe.whitelist()
+def get_transport_workspace_snapshot(report_date=None):
+    return build_transport_workspace_snapshot(report_date)
+
+
+@frappe.whitelist()
+def sync_transport_workspace_assets(report_date=None):
+    report_date = getdate(report_date or today())
+
+    if not frappe.db.exists("Workspace", WORKSPACE_NAME):
+        frappe.reload_doc("transport_management", "workspace", "transport_management")
+
+    ensure_workspace_custom_blocks(None, report_date)
+    ensure_workspace_flow_block(None, report_date)
+    frappe.clear_cache()
+    frappe.db.commit()
+    return build_transport_workspace_snapshot(report_date)
 
 
 def cleanup_legacy_daily_schedule_demo():
@@ -1067,6 +1087,22 @@ def ensure_workspace_flow_block(records, report_date):
         needs_save = True
 
     for row in workspace.links:
+        if getattr(row, "only_for", ""):
+            row.only_for = ""
+            needs_save = True
+
+        if row.label == "Transporation Order":
+            row.label = "Transportation Order"
+            needs_save = True
+
+        if row.label == "Setting":
+            row.label = "Settings"
+            needs_save = True
+
+        if row.label == "Transport Setting":
+            row.label = "Transport Settings"
+            needs_save = True
+
         if row.label == "Cargo Type" and row.link_to == "Cargo Type":
             row.link_to = "Transport Cargo Type"
             needs_save = True
@@ -1142,6 +1178,7 @@ def ensure_workspace_custom_blocks(records, report_date):
         WORKSPACE_FLOW_BLOCK_NAME,
         build_workspace_html(records, report_date),
         build_workspace_style(),
+        build_workspace_script(),
     )
     get_or_create_custom_html_block(
         WORKSPACE_TIMELINE_BLOCK_NAME,
@@ -1150,7 +1187,7 @@ def ensure_workspace_custom_blocks(records, report_date):
     )
 
 
-def get_or_create_custom_html_block(block_name, html, style):
+def get_or_create_custom_html_block(block_name, html, style, script=""):
     if frappe.db.exists("Custom HTML Block", block_name):
         doc = frappe.get_doc("Custom HTML Block", block_name)
     else:
@@ -1159,18 +1196,14 @@ def get_or_create_custom_html_block(block_name, html, style):
 
     doc.html = html
     doc.style = style
-    doc.script = ""
+    doc.script = script
     doc.private = 0
     save_with_flags(doc)
     return doc
 
 
 def build_workspace_html(records, report_date):
-    first_order = records["orders"][0] if records["orders"] else ""
-    first_trip = records["trips"][0] if records["trips"] else ""
-    route_count = len(records["routes"])
-    tanker_count = len(records["vehicles"])
-    trip_count = len(records["trips"])
+    snapshot = build_transport_workspace_snapshot(report_date)
 
     return """
     <section class="tm-flow-shell">
@@ -1183,11 +1216,16 @@ def build_workspace_html(records, report_date):
                     <strong>Vehicle</strong> masters, paired with tanker trailers, assigned to licensed drivers,
                     and then moved through transportation orders, route allocation, and live trip execution.
                 </p>
+                <p class="tm-flow-note">
+                    The summary cards refresh from live <strong>Vehicle</strong>, <strong>Transportation Order</strong>,
+                    <strong>Trip Route</strong>, and <strong>Vehicle Trip</strong> data on this site.
+                </p>
             </div>
             <div class="tm-flow-metrics">
-                <div><span>{tanker_count}</span><small>tankers prepared</small></div>
-                <div><span>{route_count}</span><small>hazchem routes</small></div>
-                <div><span>{trip_count}</span><small>live trips on {report_date}</small></div>
+                <div><span data-metric="vehicle_count">{vehicle_count}</span><small>vehicles in fleet</small></div>
+                <div><span data-metric="route_count">{route_count}</span><small>approved trip routes</small></div>
+                <div><span data-metric="order_count">{order_count}</span><small>transportation orders</small></div>
+                <div><span data-metric="trip_count">{trip_count}</span><small>vehicle trips in system</small></div>
             </div>
         </div>
         <div class="tm-flow-grid">
@@ -1195,7 +1233,7 @@ def build_workspace_html(records, report_date):
                 <h3>1. Register fleet and compliance masters</h3>
                 <p>Create tankers, tanker trailers, drivers, cargo classes, trip locations, and approved trip routes before dispatching any load.</p>
                 <div class="tm-links">
-                    <a href="/app/vehicle/view/list">Tankers / Vehicles</a>
+                    <a href="/app/vehicle/view/list">Vehicles</a>
                     <a href="/app/trailer/view/list">Tank Trailers</a>
                     <a href="/app/driver/view/list">Drivers</a>
                     <a href="/app/transport-cargo-type/view/list">Hazchem Cargo Types</a>
@@ -1207,7 +1245,7 @@ def build_workspace_html(records, report_date):
                 <p>Each customer dispatch begins as a <strong>Transportation Order</strong> with loading date, source, destination, cargo type, and hazchem operating notes.</p>
                 <div class="tm-links">
                     <a href="/app/transportation-order/view/list">Transportation Orders</a>
-                    <a href="/app/transportation-order/{first_order}">Open live order</a>
+                    <a data-dynamic-link="order" href="/app/transportation-order/view/list">Open recent order</a>
                     <a href="/app/customer/view/list">Customers</a>
                     <a href="/app/transport-location/view/list">Transport Locations</a>
                 </div>
@@ -1216,8 +1254,8 @@ def build_workspace_html(records, report_date):
                 <h3>3. Allocate tanker, trailer, and driver</h3>
                 <p>Assignments tie the hazchem load to the actual tanker combination, nominated driver, loading slot, and approved route. This becomes the operational handoff to the fleet desk.</p>
                 <div class="tm-links">
-                    <a href="/app/transportation-order/{first_order}">Assignments inside order</a>
-                    <a href="/app/vehicle/view/list">Check tanker availability</a>
+                    <a data-dynamic-link="order" href="/app/transportation-order/view/list">Assignments inside order</a>
+                    <a href="/app/vehicle/view/list">Check vehicle availability</a>
                     <a href="/app/driver/view/list">Validate driver licence</a>
                 </div>
             </article>
@@ -1226,7 +1264,7 @@ def build_workspace_html(records, report_date):
                 <p>When the tanker departs, create and maintain the <strong>Vehicle Trip</strong>. Track route, stage, diesel issue, loading status, and final offloading against the order reference.</p>
                 <div class="tm-links">
                     <a href="/app/vehicle-trip/view/list">Vehicle Trips</a>
-                    <a href="/app/vehicle-trip/{first_trip}">Open live trip</a>
+                    <a data-dynamic-link="trip" href="/app/vehicle-trip/view/list">Open recent trip</a>
                     <a href="/app/fuel-request/view/list">Fuel Requests</a>
                     <a href="/app/requested-payments/view/list">Requested Payments</a>
                 </div>
@@ -1237,7 +1275,7 @@ def build_workspace_html(records, report_date):
                 <div class="tm-links">
                     <a href="/app/query-report/{daily_schedule}">Daily Trip Schedule</a>
                     <a href="/app/query-report/{vehicle_tracking}">Vehicle Tracking Report</a>
-                    <a href="/app/workspace/Transport">Refresh Transport Workspace</a>
+                    <a href="{workspace_route}">Open Transport Management Workspace</a>
                 </div>
             </article>
             <article class="tm-step">
@@ -1252,14 +1290,13 @@ def build_workspace_html(records, report_date):
         </div>
     </section>
     """.format(
-        tanker_count=tanker_count,
-        route_count=route_count,
-        trip_count=trip_count,
-        report_date=str(report_date),
-        first_order=quote(first_order),
-        first_trip=quote(first_trip),
+        vehicle_count=snapshot["vehicle_count"],
+        route_count=snapshot["route_count"],
+        order_count=snapshot["order_count"],
+        trip_count=snapshot["trip_count"],
         daily_schedule=quote("Daily Trip Schedule"),
         vehicle_tracking=quote("Vehicle Tracking Report"),
+        workspace_route=WORKSPACE_ROUTE,
     )
 
 
@@ -1267,8 +1304,8 @@ def build_workspace_timeline_html():
     steps = [
         ("Customer", "/app/customer/view/list"),
         ("Transportation Order", "/app/transportation-order/view/list"),
-        ("Check Tanker Availability", "/app/vehicle/view/list"),
-        ("Assign Vehicle", "/app/transportation-order/view/list"),
+        ("Check Available Vehicle", "/app/vehicle/view/list"),
+        ("Assign Vehicle & Driver", "/app/transportation-order/view/list"),
         ("Start Vehicle Trip", "/app/vehicle-trip/view/list"),
         ("Fuel Request", "/app/fuel-request/view/list"),
         ("Vehicle Tracking Report", "/app/query-report/{0}".format(quote("Vehicle Tracking Report"))),
@@ -1334,8 +1371,14 @@ def build_workspace_style():
         color: #334155;
     }
 
+    .tm-flow-note {
+        margin-top: 12px !important;
+        font-size: 13px;
+    }
+
     .tm-flow-metrics {
         display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 10px;
         align-content: start;
     }
@@ -1415,6 +1458,47 @@ def build_workspace_style():
             grid-template-columns: 1fr;
         }
     }
+
+    @media (max-width: 560px) {
+        .tm-flow-metrics {
+            grid-template-columns: 1fr;
+        }
+    }
+    """
+
+
+def build_workspace_script():
+    return """
+    const metricTargets = ["vehicle_count", "route_count", "order_count", "trip_count"];
+
+    function setMetric(key, value) {
+        const element = root_element.querySelector(`[data-metric="${key}"]`);
+        if (element) {
+            element.textContent = String(value ?? 0);
+        }
+    }
+
+    function setDynamicLink(key, docname, fallbackRoute, docRoute) {
+        const element = root_element.querySelector(`[data-dynamic-link="${key}"]`);
+        if (!element) {
+            return;
+        }
+
+        element.href = docname ? `${docRoute}/${encodeURIComponent(docname)}` : fallbackRoute;
+    }
+
+    frappe
+        .call("trans_ms.transport_management.hazchem_operations.get_transport_workspace_snapshot")
+        .then((response) => {
+            const data = response.message || {};
+
+            metricTargets.forEach((key) => setMetric(key, data[key]));
+            setDynamicLink("order", data.latest_order, "/app/transportation-order/view/list", "/app/transportation-order");
+            setDynamicLink("trip", data.latest_trip, "/app/vehicle-trip/view/list", "/app/vehicle-trip");
+        })
+        .catch(() => {
+            // Keep the server-rendered fallback values when the live refresh is unavailable.
+        });
     """
 
 
@@ -1461,6 +1545,41 @@ def build_workspace_timeline_style():
         transform: translateY(-50%);
     }
     """
+
+
+def build_transport_workspace_snapshot(report_date=None):
+    report_date = getdate(report_date or today())
+
+    return {
+        "vehicle_count": count_docs("Vehicle"),
+        "route_count": count_docs("Trip Route"),
+        "order_count": count_docs("Transportation Order", {"docstatus": ["!=", 2]}),
+        "trip_count": count_docs("Vehicle Trip", {"docstatus": ["!=", 2]}),
+        "latest_order": get_latest_docname("Transportation Order", {"docstatus": ["!=", 2]}),
+        "latest_trip": get_latest_docname("Vehicle Trip", {"docstatus": ["!=", 2]}),
+        "report_date": str(report_date),
+    }
+
+
+def count_docs(doctype, filters=None):
+    if not frappe.db.exists("DocType", doctype):
+        return 0
+
+    return frappe.db.count(doctype, filters=filters or {})
+
+
+def get_latest_docname(doctype, filters=None):
+    if not frappe.db.exists("DocType", doctype):
+        return ""
+
+    records = frappe.get_all(
+        doctype,
+        filters=filters or {},
+        pluck="name",
+        order_by="modified desc",
+        limit=1,
+    )
+    return records[0] if records else ""
 
 
 def export_hazchem_import_sheets(records, output_dir, report_date):

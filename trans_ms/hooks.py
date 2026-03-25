@@ -180,9 +180,35 @@ fixtures = [
                 "name",
                 "in",
                 (
-                    "Vehicle-column_break_5",
                     "Vehicle-status",
-                    "Vehicle-current_trip",
+                    "Vehicle-trans_ms__driver_name",
+                    "Vehicle-trans_ms_current_trip",
+                    "Vehicle-trans_ms_default_trailer",
+                    "Vehicle-trans_ms_document",
+                    "Vehicle-trans_ms_driver",
+                    "Vehicle-trans_ms_driver_column_break",
+                    "Vehicle-trans_ms_driver_section",
+                    "Vehicle-trans_ms_empty_container_fuel_consumption",
+                    "Vehicle-trans_ms_flatbed_fuel_consumption",
+                    "Vehicle-trans_ms_fuel_consumption",
+                    "Vehicle-trans_ms_fuel_warehouse",
+                    "Vehicle-trans_ms_maintain_stock",
+                    "Vehicle-trans_ms_section",
+                    "Vehicle-trans_ms_transport_col_break",
+                    "Vehicle-trans_ms_vehicle_documents",
+                ),
+            ]
+        ],
+    },
+    {
+        "doctype": "Custom HTML Block",
+        "filters": [
+            [
+                "name",
+                "in",
+                (
+                    "Transport Hazchem Flow Guide",
+                    "Transport Process Timeline",
                 ),
             ]
         ],
